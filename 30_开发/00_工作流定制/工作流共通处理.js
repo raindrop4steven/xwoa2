@@ -41,6 +41,9 @@ function onSheetLoad() {
 
     // 获取节点ID
     var nid = getQueryString("nid");
+    //当没有节点Id 所以处于只读状态 初始化按钮
+    var MessageID = getQueryString("mid");
+
     if(nid === 'NODE0001'){
         options = [
             {'content': '中共无锡市委'},
@@ -101,8 +104,8 @@ function onSheetLoad() {
 				}
 			}  
 		}
-	}
-
+    }
+    initChangeOpinionCell(MessageID);
 };
 
 function onSheetCheck() {
@@ -583,4 +586,275 @@ function addCustomButtons(cell_id, nodekey) {
     submit_li.appendChild(submit_button);
     title_bar.prepend(submit_li);
     title_bar.prepend(read_li);
+}
+
+/*************************************领导意见修改************************************** */
+// 通用修改Cell
+function initChangeOpinionCell(MessageID){
+    $.ajax({
+		url: "/Apps/DEP/Test/GeneralOpinion?mid=" + MessageID,
+		type: 'GET',
+		async: false,
+		success: function(r) {
+            if(r.Succeed == true)
+            {
+                r.Data.forEach(function(item){
+                    var cellID = item.cellId;
+                    var type = item.type;
+                    var history = item.history;
+                    
+                    if (type == 0){ // 多人审批意见
+                        $(cellID).html("");
+                        $(cellID).html(history);
+                    } else {
+                        var historyCellID = cellID + ' > div.cell-history';
+                        if($(historyCellID).text() != ""){ // 当前用户正在处理
+                            cellID = historyCellID;
+                        }
+                        $(cellID).html("");
+                        $(cellID).html(history);
+                        // Todo: 前用户可签批时，应隐藏签批按钮
+                        // if(cellID === historyCellID){
+                        //     $(".fa.fa-edit").hide();
+                        // }
+                    }
+                });
+            }
+            else
+            {
+                console.log(r.Message);
+            }
+		}
+	});
+}
+
+//初始化拟办意见cell
+function initNibanCell(MessageID){
+	var nibanSelector = '#C-8-4';
+
+	$.ajax({
+		url: "/Apps/DEP/Test/GeneralOpinion?MessageID=" + MessageID,
+		type: 'GET',
+		async: false,
+		dataType:'json',
+		success: function(r) {
+			// 检查是否有最新意见
+			if(r.Opinion != undefined && r.Opinion.length > 0){
+				$(nibanSelector).html("");
+				$(nibanSelector).html(r.Opinion);
+			}
+		}
+	});
+}
+
+
+ //初始化领导意见cell
+ function initLeaderCell(MessageID){    
+  var leaderSelector = LEADER_OPINION_CELL_HISTORY_ID;
+  if($(leaderSelector).text() == ""){
+    leaderSelector = LEADER_OPINION_CELL_ID;
+  }
+    $(leaderSelector).html("");
+    
+    $.ajax({
+		url: "/Apps/DEP/Test/GeneralOpinion?MessageID=" + MessageID,
+        type: 'GET',
+        async: false,
+        dataType:'json',
+        success: function(r) {
+            $(leaderSelector).html(r.history);
+			// 当前用户可签批时，应隐藏签批按钮
+			if(leaderSelector === LEADER_OPINION_CELL_HISTORY_ID){
+				$(".fa.fa-edit").hide();
+			}
+        }
+    });
+    
+  }
+
+//初始化 可以编辑的区域
+function initModify(){
+    //当存在领导节点的时候，让领导意见部分可以再次修改
+    if($.inArray(LEADER_NODE_KEY,read_only_node_ids) >=0 ){
+
+        $(".my-opinion").on('click',function(){
+            addModifyTextArea(this)
+        })
+    }
+
+}
+
+//转换编辑区域
+function addModifyTextArea(opinionObj){
+    if(editFlag)
+    {
+        //首先清空该td的点击事件
+        var opinionVal = $(opinionObj).find('span').text();
+        $(opinionObj).find('span').hide();
+
+        //插入textarea 编辑框
+        var tarea = $("<textarea />").width('95%').addClass("modify-leader");
+        tarea.val(opinionVal)
+        tarea.css({
+            'resize':'none',
+            'outline':'none',
+            'height':'100%'
+        })
+        $(opinionObj).append(tarea)
+        //添加提交按钮
+        $(opinionObj).append(addModifyButton())
+        $(opinionObj).append(addCancelButton())
+		// 隐藏编辑图标
+		$(".fa.fa-edit").hide();
+        $('.my-opinion').unbind('click');
+    }
+    else
+    {
+        editFlag = true;
+		// 显示编辑图标
+		$(".fa.fa-edit").show();
+    }
+}
+
+//添加修改的保存按钮
+function  addModifyButton(){
+   //创建保存按钮
+    var modify_button = document.createElement('A');
+    modify_button.textContent = "保存修改"
+    modify_button.setAttribute("id","btn-read-only-modify");
+    modify_button.onclick = function(){
+        // 流程ID
+        var MessageID = getQueryString("mid");
+		// 排序
+		var order = $('.my-opinion').attr("order");
+		if(order === undefined)
+		{
+			order = "";
+		}
+        // 获取
+        var opinion = $(".modify-leader").val();
+        $.ajax({
+            url: '/Apps/DEP/Test/AddNewOpinion',
+            type: 'POST',
+            data: { mid: MessageID ,nid:LEADER_NODE_KEY,opinion:opinion, order:order},
+            async: false,
+            dataType:'json',
+            success: function(r) {
+                if(r.Succeed){
+                    top.location.href = '/Apps/Workflow/Running/Open?mid={0}'.format(MessageID); 
+                }
+            }
+        });
+
+
+    }
+  return modify_button
+}
+
+//添加修改的取消按钮
+function addCancelButton(){
+ 
+    var c_button = document.createElement('A');
+    c_button.textContent = "取消"
+    c_button.setAttribute("id","btn-modify-cancel");
+    c_button.onclick = function(){
+        editFlag = false;
+        $('.my-opinion').find('textarea').remove();
+        $('.my-opinion').find('a').remove();
+        $('.my-opinion').find('span').show(); 
+        $(".my-opinion").on('click',function(){
+            addModifyTextArea(this)
+        });
+    }
+    return c_button
+}
+
+/************************** 拟办意见修改 *********************************/
+//初始化 可以编辑的区域
+function initNibanModify(){
+    //当存在领导节点的时候，让领导意见部分可以再次修改
+    if($.inArray(NIBAN_NODE_KEY,read_only_node_ids) >=0 ){
+        $(".my-niban-opinion").on('click',function(){
+            addNibanModifyTextArea(this)
+        })
+    }
+}
+
+//转换编辑区域
+function addNibanModifyTextArea(opinionObj){
+    if(nibanEditFlag)
+    {
+        //首先清空该td的点击事件
+        var opinionVal = $(opinionObj).find('span').text();
+        $(opinionObj).find('span').hide();
+
+        //插入textarea 编辑框
+        var tarea = $("<textarea />").width('95%').addClass("modify-niban");
+        tarea.val(opinionVal)
+        tarea.css({
+            'resize':'none',
+            'outline':'none',
+            'height':'100%'
+        })
+        $(opinionObj).append(tarea)
+        //添加提交按钮
+        $(opinionObj).append(addNibanModifyButton())
+        $(opinionObj).append(addNibanCancelButton())
+		// 隐藏编辑图标
+		$(".fa.fa-edit").hide();
+        $('.my-niban-opinion').unbind('click');
+    }
+    else
+    {
+        nibanEditFlag = true;
+		// 显示编辑图标
+		$(".fa.fa-edit").show();
+    }
+}
+
+//添加修改的保存按钮
+function  addNibanModifyButton(){
+   //创建保存按钮
+    var niban_modify_button = document.createElement('A');
+    niban_modify_button.textContent = "保存修改"
+    niban_modify_button.setAttribute("id","btn-read-only-modify");
+    niban_modify_button.onclick = function(){
+        // 流程ID
+        var MessageID = getQueryString("mid");
+        // 获取
+        var opinion = $(".modify-niban").val();
+        $.ajax({
+            url: '/Apps/DEP/Test/AddNewOpinion',
+            type: 'POST',
+            data: { mid: MessageID, opinion:opinion},
+            async: false,
+            dataType:'json',
+            success: function(r) {
+                if(r.Succeed){
+                    top.location.href = '/Apps/Workflow/Running/Open?mid={0}'.format(MessageID); 
+                }
+            }
+        });
+
+
+    }
+	return niban_modify_button
+}
+
+//添加修改的取消按钮
+function addNibanCancelButton(){
+ 
+    var niban_c_button = document.createElement('A');
+    niban_c_button.textContent = "取消"
+    niban_c_button.setAttribute("id","btn-modify-cancel");
+    niban_c_button.onclick = function(){
+        nibanEditFlag = false;
+        $('.my-niban-opinion').find('textarea').remove();
+        $('.my-niban-opinion').find('a').remove();
+        $('.my-niban-opinion').find('span').show(); 
+        $(".my-niban-opinion").on('click',function(){
+            addNibanModifyTextArea(this)
+        });
+    }
+    return niban_c_button
 }
