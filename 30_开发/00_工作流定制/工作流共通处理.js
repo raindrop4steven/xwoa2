@@ -608,15 +608,13 @@ function initChangeOpinionCell(MessageID){
                         $(cellID).html(history);
                     } else {
                         var historyCellID = cellID + ' > div.cell-history';
-                        if($(historyCellID).text() != ""){ // 当前用户正在处理
-                            cellID = historyCellID;
+                        if($(historyCellID).text() == ""){ // 当前用户未正在处理
+                            $(cellID).html("");
+                            $(cellID).html(history);
+                        } else {
+                            $(historyCellID).html(history);
+                            $(".fa.fa-edit").hide();
                         }
-                        $(cellID).html("");
-                        $(cellID).html(history);
-                        // Todo: 前用户可签批时，应隐藏签批按钮
-                        // if(cellID === historyCellID){
-                        //     $(".fa.fa-edit").hide();
-                        // }
                     }
                 });
             }
