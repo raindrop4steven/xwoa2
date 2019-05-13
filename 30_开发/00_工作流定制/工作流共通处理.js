@@ -7,6 +7,7 @@
  var NIBAN_NODE_KEY = 'NODE0002';
  var LEADER_NODE_KEY = 'NODE0004';
  var DEPT_NODE_KEY  = 'NODE0005';
+ var editFlag = true;
 
 /*
  * 领导意见
@@ -602,16 +603,25 @@ function initChangeOpinionCell(MessageID){
                     var cellID = item.cellId;
                     var type = item.type;
                     var history = item.history;
+                    var node = item.node;
                     
-                    if (type == 0){ // 多人审批意见
+                    if (type == 0){ // 单人审批意见
                         $(cellID).html("");
                         $(cellID).html(history);
-                    } else {
+                        // 初始化按钮动作
+                        $(".my-opinion").on('click',function(){
+                            addModifyTextArea(this, node, type, cellID);
+                        });
+                    } else { // 多人审批意见
                         var historyCellID = cellID + ' > div.cell-history';
                         if($(historyCellID).text() == ""){ // 当前用户未正在处理
                             $(cellID).html("");
                             $(cellID).html(history);
-                        } else {
+                            // 初始化按钮动作
+                            $(".my-opinion").on('click',function(){
+                                addModifyTextArea(this, node, type, cellID);
+                            });
+                        } else { // 当前用户正在处理，则不显示编辑按钮
                             $(historyCellID).html(history);
                             $(".fa.fa-edit").hide();
                         }
@@ -683,7 +693,7 @@ function initModify(){
 }
 
 //转换编辑区域
-function addModifyTextArea(opinionObj){
+function addModifyTextArea(opinionObj, node, type, cellId){
     if(editFlag)
     {
         //首先清空该td的点击事件
@@ -700,8 +710,8 @@ function addModifyTextArea(opinionObj){
         })
         $(opinionObj).append(tarea)
         //添加提交按钮
-        $(opinionObj).append(addModifyButton())
-        $(opinionObj).append(addCancelButton())
+        $(opinionObj).append(addModifyButton(node, type, cellId))
+        $(opinionObj).append(addCancelButton(node))
 		// 隐藏编辑图标
 		$(".fa.fa-edit").hide();
         $('.my-opinion').unbind('click');
@@ -715,7 +725,7 @@ function addModifyTextArea(opinionObj){
 }
 
 //添加修改的保存按钮
-function  addModifyButton(){
+function  addModifyButton(node, type, cellId){
    //创建保存按钮
     var modify_button = document.createElement('A');
     modify_button.textContent = "保存修改"
@@ -724,7 +734,7 @@ function  addModifyButton(){
         // 流程ID
         var MessageID = getQueryString("mid");
 		// 排序
-		var order = $('.my-opinion').attr("order");
+		var order = $(cellId).find('.my-opinion').first().attr("order");
 		if(order === undefined)
 		{
 			order = "";
@@ -734,23 +744,20 @@ function  addModifyButton(){
         $.ajax({
             url: '/Apps/DEP/Test/AddNewOpinion',
             type: 'POST',
-            data: { mid: MessageID ,nid:LEADER_NODE_KEY,opinion:opinion, order:order},
+            data: { mid: MessageID ,nid:node, opinion:opinion, type:type, cellId:cellId, order:order},
             async: false,
-            dataType:'json',
             success: function(r) {
                 if(r.Succeed){
                     top.location.href = '/Apps/Workflow/Running/Open?mid={0}'.format(MessageID); 
                 }
             }
         });
-
-
     }
   return modify_button
 }
 
 //添加修改的取消按钮
-function addCancelButton(){
+function addCancelButton(node){
  
     var c_button = document.createElement('A');
     c_button.textContent = "取消"
@@ -761,7 +768,7 @@ function addCancelButton(){
         $('.my-opinion').find('a').remove();
         $('.my-opinion').find('span').show(); 
         $(".my-opinion").on('click',function(){
-            addModifyTextArea(this)
+            addModifyTextArea(this, node)
         });
     }
     return c_button
