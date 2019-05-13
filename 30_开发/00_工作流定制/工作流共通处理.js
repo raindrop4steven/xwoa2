@@ -612,7 +612,7 @@ function initChangeOpinionCell(MessageID){
                         $(cellID).html("");
                         $(cellID).html(history);
                         // 初始化按钮动作
-                        $(".my-opinion").on('click',function(){
+                        $(cellID + " > .my-opinion").on('click',function(){
                             addModifyTextArea(this, node, type, cellID);
                         });
                     } else { // 多人审批意见
@@ -621,12 +621,12 @@ function initChangeOpinionCell(MessageID){
                             $(cellID).html("");
                             $(cellID).html(history);
                             // 初始化按钮动作
-                            $(".my-opinion").on('click',function(){
+                            $(cellID + "> .my-opinion").on('click',function(){
                                 addModifyTextArea(this, node, type, cellID);
                             });
                         } else { // 当前用户正在处理，则不显示编辑按钮
                             $(historyCellID).html(history);
-                            $(".fa.fa-edit").hide();
+                            $(cellID).find(".fa.fa-edit").first().hide();
                         }
                     }
                 });
@@ -658,16 +658,16 @@ function addModifyTextArea(opinionObj, node, type, cellId){
         $(opinionObj).append(tarea)
         //添加提交按钮
         $(opinionObj).append(addModifyButton(node, type, cellId))
-        $(opinionObj).append(addCancelButton(node))
+        $(opinionObj).append(addCancelButton(node, type, cellId))
 		// 隐藏编辑图标
-		$(".fa.fa-edit").hide();
-        $('.my-opinion').unbind('click');
+		$(cellId).find(".fa.fa-edit").first().hide();
+        $(cellId + '> .my-opinion').unbind('click');
     }
     else
     {
         editFlagDict[node] = true;
 		// 显示编辑图标
-		$(".fa.fa-edit").show();
+		$(cellId).find(".fa.fa-edit").first().show();
     }
 }
 
@@ -704,18 +704,18 @@ function  addModifyButton(node, type, cellId){
 }
 
 //添加修改的取消按钮
-function addCancelButton(node){
+function addCancelButton(node, type, cellId){
  
     var c_button = document.createElement('A');
     c_button.textContent = "取消"
     c_button.setAttribute("id","btn-modify-cancel");
     c_button.onclick = function(){
         editFlagDict[node] = false;
-        $('.my-opinion').find('textarea').remove();
-        $('.my-opinion').find('a').remove();
-        $('.my-opinion').find('span').show(); 
-        $(".my-opinion").on('click',function(){
-            addModifyTextArea(this, node)
+        $(cellId + '> .my-opinion').find('textarea').remove();
+        $(cellId + '> .my-opinion').find('a').remove();
+        $(cellId + '> .my-opinion').find('span').show();
+        $(cellId + '> .my-opinion').on('click',function(){
+            addModifyTextArea(this, node, type, cellId)
         });
     }
     return c_button
