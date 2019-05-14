@@ -32,12 +32,6 @@ function main() {
          */
         // 覆盖默认保存草稿操作
         onSaveDraft();
-        // 个人意见修改
-        GetOpinionConfig(MessageID, nid);
-        // 初始化修改意见
-        initChangeOpinionCell(MessageID);
-        // 初始化自定义按钮
-        RenderCustomButton(MessageID);
 
         if(nid === 'NODE0001'){
             options = [
@@ -58,7 +52,7 @@ function main() {
                 {'content': '无锡市太湖水污染防治办公室'}
             ]
             // 定制显示来文单位
-            ShowUnitList("unit", "165px", "362px", options, '#C-4-8', '#C-4-4');
+            ShowUnitList("unit", "718px", "231px", "306px", "54px", "55px", options, '#C-5-9', '#C-5-9');
         }
     }
 }
