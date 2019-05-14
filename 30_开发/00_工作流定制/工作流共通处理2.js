@@ -4,6 +4,38 @@
  var editFlagDict = {};
 
 function onSheetLoad() {
+    loadScripts(["/Apps/DEP/Content/sdk/sdk.js"], function(){
+        main();
+    });
+};
+
+function onSheetCheck() {
+};
+
+function onAnyCellUpdate() {
+};
+
+function loadScripts(array,callback){
+    var loader = function(src,handler){
+        var script = document.createElement("script");
+        script.src = src;
+        script.onload = script.onreadystatechange = function(){
+            script.onreadystatechange = script.onload = null;
+            handler();
+        }
+        var head = document.getElementsByTagName("head")[0];
+        (head || document.body).appendChild( script );
+    };
+    (function run(){
+        if(array.length!=0){
+            loader(array.shift(), run);
+        }else{
+            callback && callback();
+        }
+    })();
+}
+
+function main() {
     /*
      * 参数获取
      */
@@ -53,13 +85,7 @@ function onSheetLoad() {
 		// 定制显示来文单位
 		ShowUnitList("unit", "165px", "362px", options, '#C-4-8', '#C-4-4');
     }
-};
-
-function onSheetCheck() {
-};
-
-function onAnyCellUpdate() {
-};
+}
 
 /******************************************************************************************
  *              个人意见部分
@@ -74,14 +100,18 @@ function GetOpinionConfig(mid, nid) {
         },
         success: function(data){
             var opinionConfig = null;
-            data.Data.opinions.forEach(function(item){
-                if(nid == item.key) {
+            var i = 0;
+            for (i = 0; i < data.Data.opinions.length; i++) {
+                var item = data.Data.opinions[i];
+                if (nid == item.key) {
                     opinionConfig = item.value;
                     break;
-                } else {
+                }
+                else
+                {
                     continue;
                 }
-            });
+            }
             if (opinionConfig == null) {
                 console.log("目前节点无个人意见配置");
             } else {
@@ -105,7 +135,8 @@ function RenderPrivateOpinion(mid, nid, config) {
     opinion_list_button_id = config.optionCellId;
 
     // 添加个人意见列表
-    AddPrivateOpinion();
+    AddPrivateOpinion(opinion_list_button_id);
+    ShowPrivateOpinion(opinion_list_button_id);
 }
 
 // 插入【添加】按钮
@@ -134,7 +165,7 @@ function InsertMultiOpinion(opinion){
     SaveCellData(worksheet_id, getQueryString('nid'), opinion_cell_id.split('-')[1], opinion_cell_id.split('-')[2], opinion, '');
 }
 // 插入个人意见列表
-function ShowPrivateOpinion(){
+function ShowPrivateOpinion(opinion_button_id){
     $.get('/Apps/Tiger/Opinion/GetPrivateOpinion', function(result){
           // 首先移除旧的意见列表
           if($("#privateOpinion").length > 0){
@@ -168,7 +199,7 @@ function ShowPrivateOpinion(){
           });
 }
 // 插入个人意见列表
-function AddPrivateOpinion(){
+function AddPrivateOpinion(opinion_button_id){
     $(opinion_button_id).attr('class', 'a-c b-l b-r b-t b-b drop control1');
     // 设置点击事件
     $(opinion_button_id).click(function(event){
