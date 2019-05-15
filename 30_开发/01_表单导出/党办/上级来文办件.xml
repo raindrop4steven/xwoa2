@@ -1,0 +1,1411 @@
+<Template>
+  <Messages>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <MessageTitle>上级来文办件</MessageTitle>
+    <MessageCreateTime>2018/8/9 17:21:55</MessageCreateTime>
+    <MessageFinishTime>2018/7/14 10:40:42</MessageFinishTime>
+    <MessageTimeLimit></MessageTimeLimit>
+    <MessageFinishTimeExpected>2999/12/31 0:00:00</MessageFinishTimeExpected>
+    <MessageIssuedBy>100001</MessageIssuedBy>
+    <MessageNote></MessageNote>
+    <InitNodeKey>NODE0001</InitNodeKey>
+    <MessageStatus>0</MessageStatus>
+    <IsTemplate>1</IsTemplate>
+    <MessageType>file</MessageType>
+    <MessageTypeKey>上级来文办件</MessageTypeKey>
+    <MessageHelper></MessageHelper>
+    <FromTemplate></FromTemplate>
+    <DataSourceID></DataSourceID>
+  </Messages>
+  <Nodes>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <NodeName>文电签收</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>1</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>appl</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/4/18 16:02:45</InTime>
+    <OutTime>2018/4/18 16:02:45</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <NodeName>党政办拟办</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>2</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>pos:,91209098-0ee8-44ad-9b2e-bf6fa3ec1e38,</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/7/14 10:46:32</InTime>
+    <OutTime>2018/7/14 10:46:32</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendbackConfig":{"SendbackToLastNode":1,"SendbackThenFlow":1,"SendbackThenJumpThis":0,"SendbackCondition":"","SendbackHideSendByCondition":0,"SendbackWhenNoSendTarget":0},"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0003</NodeKey>
+    <NodeName>文电科转发</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>2</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>sameto:f90b3ea8-21ee-4239-9a8f-f7698c7ae027,NODE0001</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/7/14 10:47:07</InTime>
+    <OutTime>2018/7/14 10:47:07</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>2</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0004</NodeKey>
+    <NodeName>领导批示</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>2</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>dynamic</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/7/14 10:47:53</InTime>
+    <OutTime>2018/7/14 10:47:53</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>1</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendbackConfig":{"SendbackThenFlow":1,"SendbackThenJumpThis":0,"SendbackCondition":"","SendbackHideSendByCondition":0,"SendbackWhenNoSendTarget":0},"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <NodeName>部门承办</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>2</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>dynamic</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/7/14 10:48:37</InTime>
+    <OutTime>2018/7/14 10:48:37</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>1</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendbackConfig":{"SendbackThenFlow":1,"SendbackThenJumpThis":0,"SendbackCondition":"","SendbackHideSendByCondition":0,"SendbackWhenNoSendTarget":0},"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0008</NodeKey>
+    <NodeName>文电科归档</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>2</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>sameto:f90b3ea8-21ee-4239-9a8f-f7698c7ae027,NODE0001</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/7/14 10:51:30</InTime>
+    <OutTime>2018/7/14 10:51:30</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0009</NodeKey>
+    <NodeName>结束</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>4</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress></HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/7/14 10:51:50</InTime>
+    <OutTime>2018/7/14 10:51:50</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>1</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <NodeLayout>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <X>80</X>
+    <Y>180</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <X>140</X>
+    <Y>260</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0003</NodeKey>
+    <X>280</X>
+    <Y>260</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0004</NodeKey>
+    <X>360</X>
+    <Y>160</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <X>200</X>
+    <Y>160</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0008</NodeKey>
+    <X>400</X>
+    <Y>260</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0009</NodeKey>
+    <X>500</X>
+    <Y>260</Y>
+  </NodeLayout>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0004</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>D10</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>D12</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>D14</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>D4</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>D5</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>D6</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>D7</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>D8</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0004</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>E11</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>E13</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>E9</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>H4</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>H5</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>H9</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <FieldKey>I5</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeAction>
+    <NodeActionID>7069</NodeActionID>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <NodeActionName>更新流水号</NodeActionName>
+    <NodeActionNo>0</NodeActionNo>
+    <NodeActionOccur>3</NodeActionOccur>
+    <NodeActionCommand>sql:UPDATE [GW_Do] set [Number]=[Number]+1 where [Name] = '{{办件收文.H5}}'</NodeActionCommand>
+    <NodeActionCommandRoleback></NodeActionCommandRoleback>
+    <NodeActionResult>0</NodeActionResult>
+    <NodeActionResultRoleback>0</NodeActionResultRoleback>
+    <CreateTime>2018/6/22 15:52:21</CreateTime>
+  </NodeAction>
+  <NodeAction>
+    <NodeActionID>7070</NodeActionID>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <NodeActionName>映射收文表</NodeActionName>
+    <NodeActionNo>0</NodeActionNo>
+    <NodeActionOccur>1</NodeActionOccur>
+    <NodeActionCommand>dmsave:办件收文.收文表</NodeActionCommand>
+    <NodeActionCommandRoleback></NodeActionCommandRoleback>
+    <NodeActionResult>0</NodeActionResult>
+    <NodeActionResultRoleback>0</NodeActionResultRoleback>
+    <CreateTime>2018/6/25 12:17:31</CreateTime>
+  </NodeAction>
+  <NodeAction>
+    <NodeActionID>7071</NodeActionID>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <NodeActionName>更新标记</NodeActionName>
+    <NodeActionNo>0</NodeActionNo>
+    <NodeActionOccur>3</NodeActionOccur>
+    <NodeActionCommand>sql:UPDATE [GW_ReceiveFile] SET [IsFirstLoading] = 0 WHERE [MessageId] = '{{MESSAGE_ID}}'</NodeActionCommand>
+    <NodeActionCommandRoleback></NodeActionCommandRoleback>
+    <NodeActionResult>0</NodeActionResult>
+    <NodeActionResultRoleback>0</NodeActionResultRoleback>
+    <CreateTime>2018/6/27 16:46:53</CreateTime>
+  </NodeAction>
+  <NodePath>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <TargetNodeKey>NODE0002</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/7/14 10:46:32</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <TargetNodeKey>NODE0003</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/7/14 10:47:07</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0003</NodeKey>
+    <TargetNodeKey>NODE0004</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/7/14 10:47:53</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0003</NodeKey>
+    <TargetNodeKey>NODE0005</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/7/14 10:48:37</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0003</NodeKey>
+    <TargetNodeKey>NODE0008</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/7/14 10:51:30</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0004</NodeKey>
+    <TargetNodeKey>NODE0003</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/7/14 10:48:01</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <TargetNodeKey>NODE0003</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/7/14 10:48:48</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <NodeKey>NODE0008</NodeKey>
+    <TargetNodeKey>NODE0009</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/7/14 10:51:50</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <Doc>
+    <DocID>fd2b07a8-d4d0-4e2c-8a06-4b26b688a1b4</DocID>
+    <MessageID>f90b3ea8-21ee-4239-9a8f-f7698c7ae027</MessageID>
+    <DocName>办件收文</DocName>
+    <DocType>spreadsheet</DocType>
+    <DocDescr></DocDescr>
+    <DocHelperID>d2a72e8c-9bea-4ccd-845e-7ceaba2efbb4</DocHelperID>
+    <DocContent></DocContent>
+  </Doc>
+  <Worksheets>
+    <WorksheetID>d2a72e8c-9bea-4ccd-845e-7ceaba2efbb4</WorksheetID>
+    <WorksheetName>办件收文</WorksheetName>
+    <WorkbookID>0</WorkbookID>
+    <CheckOut></CheckOut>
+    <CreateTime>2018/7/14 10:40:42</CreateTime>
+    <UpdateTime>2019/1/4 14:28:03</UpdateTime>
+    <RowHeight>2,57;4,70;5,70;6,70;7,70;8,210;9,58;10,242;11,50;12,241;13,48;14,61;15,30;16,31;17,32</RowHeight>
+    <ColWidth>1,47;2,51;3,61;4,168;5,178;6,62;7,85;8,160;9,118</ColWidth>
+    <Document>&lt;Table&gt;&lt;Row Index="2" Size="57" /&gt;&lt;Row Index="4" Size="70" /&gt;&lt;Row Index="5" Size="70" /&gt;&lt;Row Index="6" Size="70" /&gt;&lt;Row Index="7" Size="70" /&gt;&lt;Row Index="8" Size="210" /&gt;&lt;Row Index="9" Size="58" /&gt;&lt;Row Index="10" Size="242" /&gt;&lt;Row Index="11" Size="50" /&gt;&lt;Row Index="12" Size="241" /&gt;&lt;Row Index="13" Size="48" /&gt;&lt;Row Index="14" Size="61" /&gt;&lt;Row Index="15" Size="30" /&gt;&lt;Row Index="16" Size="31" /&gt;&lt;Row Index="17" Size="32" /&gt;&lt;Column Index="1" Size="47" /&gt;&lt;Column Index="2" Size="51" /&gt;&lt;Column Index="3" Size="61" /&gt;&lt;Column Index="4" Size="168" /&gt;&lt;Column Index="5" Size="178" /&gt;&lt;Column Index="6" Size="62" /&gt;&lt;Column Index="7" Size="85" /&gt;&lt;Column Index="8" Size="160" /&gt;&lt;Column Index="9" Size="118" /&gt;&lt;CellEvent Row="4" Col="4" EventOn="OnUpdate" EventCommand="javascript:mappingData()" /&gt;&lt;CellEvent Row="4" Col="4" EventOn="OnDblClick" EventCommand="" /&gt;&lt;CellEvent Row="4" Col="8" EventOn="OnUpdate" EventCommand="javascript:mappingData()" /&gt;&lt;CellEvent Row="5" Col="4" EventOn="OnUpdate" EventCommand="javascript:mappingData()" /&gt;&lt;CellEvent Row="5" Col="4" EventOn="OnDblClick" EventCommand="" /&gt;&lt;CellEvent Row="5" Col="9" EventOn="OnUpdate" EventCommand="javascript:mappingData()" /&gt;&lt;CellEvent Row="5" Col="9" EventOn="OnDblClick" EventCommand="" /&gt;&lt;CellEvent Row="6" Col="4" EventOn="OnUpdate" EventCommand="javascript:mappingData()" /&gt;&lt;CellEvent Row="11" Col="5" EventOn="OnUpdate" EventCommand="javascript:opinionChanged('#C-11-5');" /&gt;&lt;CellEvent Row="11" Col="5" EventOn="OnDblClick" EventCommand="" /&gt;&lt;CellEvent Row="13" Col="5" EventOn="OnUpdate" EventCommand="javascript:opinionChanged('#C-13-5');" /&gt;&lt;CellEvent Row="5" Col="8" EventOn="OnUpdate" EventCommand="javascript:setSerialNumber()" /&gt;&lt;Cell Col="2" Row="2" MergeToCol="9" FontName="方正小标宋简体" FontSize="24" FontBold="-1" Align="2" Value="无锡高新区（新吴区）公文处理单" /&gt;&lt;Cell Col="2" Row="4" MergeToCol="3" FontName="方正小标宋简体" FontSize="16" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" Value="来文单位" /&gt;&lt;Cell Col="4" Row="4" MergeToCol="5" FontName="仿宋_GB2312" FontSize="14" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" /&gt;&lt;Cell Col="2" Row="5" MergeToCol="3" FontName="方正小标宋简体" FontSize="16" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" Value="来文文号" /&gt;&lt;Cell Col="4" Row="5" MergeToCol="5" FontName="仿宋_GB2312" FontSize="14" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" /&gt;&lt;Cell Col="6" Row="5" MergeToCol="7" FontName="方正小标宋简体" FontSize="16" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" Value="收文文号" /&gt;&lt;Cell Col="8" Row="5" FontName="仿宋_GB2312" FontSize="14" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" /&gt;&lt;Cell Col="2" Row="6" MergeToCol="3" FontName="方正小标宋简体" FontSize="16" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" Value="文件标题" /&gt;&lt;Cell Col="4" Row="6" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" /&gt;&lt;Cell Col="2" Row="8" MergeToCol="3" MergeToRow="9" FontName="方正小标宋简体" FontSize="16" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" Value="党政办&amp;#xA;拟办" /&gt;&lt;Cell Col="4" Row="8" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="undefined" /&gt;&lt;Cell Col="4" Row="9" FontName="方正小标宋简体" FontSize="16" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" Value="签办人" /&gt;&lt;Cell Col="6" Row="9" MergeToCol="7" FontName="方正小标宋简体" FontSize="16" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" Value="签办时间" /&gt;&lt;Cell Col="8" Row="9" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" DSValues="yyyy-mm-dd hh:ii,@" Align="2" DataSource="3" /&gt;&lt;Cell Col="2" Row="10" MergeToCol="3" MergeToRow="11" FontName="方正小标宋简体" FontSize="16" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" Value="领导批示" /&gt;&lt;Cell Col="4" Row="10" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" KeepHistory="true" Align="undefined" /&gt;&lt;Cell Col="2" Row="12" MergeToCol="3" MergeToRow="13" FontName="方正小标宋简体" FontSize="16" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" Value="部门承办" /&gt;&lt;Cell Col="4" Row="12" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" KeepHistory="true" Align="undefined" /&gt;&lt;Cell Col="2" Row="7" MergeToCol="3" FontName="方正小标宋简体" FontSize="16" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" Value="正文" /&gt;&lt;Cell Col="4" Row="7" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="undefined" DataSource="10" /&gt;&lt;Cell Col="9" Row="5" FontName="仿宋_GB2312" FontSize="14" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" /&gt;&lt;Cell Col="5" Row="9" FontName="仿宋_GB2312" FontSize="14" Align="2" DataSource="102" /&gt;&lt;Cell Col="6" Row="4" MergeToCol="7" FontName="方正小标宋简体" FontSize="16" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" Align="2" Value="收文日期" /&gt;&lt;Cell Col="8" Row="4" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" BorderTopWidth="1" DSValues="yyyy-mm-dd,@" Align="2" DataSource="3" /&gt;&lt;Cell Col="6" Row="11" MergeToCol="7" FontSize="16" FontName="方正小标宋简体" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" Value="个人意见模板" /&gt;&lt;Cell Col="8" Row="11" MergeToCol="9" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" /&gt;&lt;Cell Col="4" Row="11" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" Align="2" Value="常用意见模板" /&gt;&lt;Cell Col="5" Row="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" DSValues="公共模板意见|Content|Content|Content" FontSize="14" FontName="仿宋_GB2312" DataSource="2" /&gt;&lt;Cell Col="6" Row="13" MergeToCol="7" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" Align="2" Value="个人意见模板" /&gt;&lt;Cell Col="8" Row="13" MergeToCol="9" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" /&gt;&lt;Cell Col="4" Row="13" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" Align="2" Value="常用意见模板" /&gt;&lt;Cell Col="5" Row="13" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" DSValues="公共模板意见|Content|Content|Content" FontSize="14" FontName="仿宋_GB2312" DataSource="2" /&gt;&lt;Cell Col="2" Row="14" MergeToCol="3" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" Align="2" Value="承办意见&amp;#xA;附件" /&gt;&lt;Cell Col="4" Row="14" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" Align="undefined" DataSource="10" /&gt;&lt;/Table&gt;</Document>
+    <DataStorage>&lt;Data&gt;&lt;DataSource Name="收文序列" Connstr="137数据库" Sql="SELECT [ID],[Name] FROM [收文序列]&amp;#xA;where ParentID = '0'" /&gt;&lt;DataSource Name="收文表" Connstr="137数据库" Sql="SELECT * FROM [GW_ReceiveFile]" /&gt;&lt;DataSource Name="公共模板意见" Connstr="137数据库" Sql="SELECT ID, Content FROM TGR_PublicOpinion;" /&gt;&lt;DataMapping Name="收文表" DataSource="收文表" MappingType="Single" RowType="Row" MappingArea="" Access="A"&gt;&lt;Column Name="Id" Type="DBTYPE_WVARCHAR" Mapping="*guid" Identity="true" /&gt;&lt;Column Name="DocumentNumber" Type="DBTYPE_WVARCHAR" Mapping="D5" Identity="false" /&gt;&lt;Column Name="DocumentTitle" Type="DBTYPE_WVARCHAR" Mapping="D6" Identity="false" /&gt;&lt;Column Name="ClosedOrHairTime" Type="DBTYPE_DBTIMESTAMP" Mapping="H4" Identity="false" /&gt;&lt;Column Name="CreatedTime" Type="DBTYPE_DBTIMESTAMP" Mapping="H4" Identity="false" /&gt;&lt;Column Name="CreatedBy" Type="DBTYPE_WVARCHAR" Mapping="B12.Value" Identity="false" /&gt;&lt;Column Name="UpdatedTime" Type="DBTYPE_DBTIMESTAMP" Mapping="H4" Identity="false" /&gt;&lt;Column Name="UpdatedBy" Type="DBTYPE_WVARCHAR" Mapping="B12.Value" Identity="false" /&gt;&lt;Column Name="MessageId" Type="DBTYPE_WVARCHAR" Mapping="$$MESSAGE_ID$$" Identity="false" /&gt;&lt;Column Name="WorkFlowId" Type="DBTYPE_WVARCHAR" Mapping="f90b3ea8-21ee-4239-9a8f-f7698c7ae027 " Identity="false" /&gt;&lt;Column Name="ReceivedDocumentUnit" Type="DBTYPE_WVARCHAR" Mapping="D4" Identity="false" /&gt;&lt;Column Name="SequenceName" Type="DBTYPE_WVARCHAR" Mapping="H5" Identity="false" /&gt;&lt;Column Name="SequenceNumber" Type="DBTYPE_WVARCHAR" Mapping="I5" Identity="false" /&gt;&lt;Column Name="IsFirstLoading" Type="DBTYPE_BOOL" Mapping="true" Identity="false" /&gt;&lt;/DataMapping&gt;&lt;/Data&gt;</DataStorage>
+    <Script>/*******************************************************************
+ * 上级来文表单定制
+ ******************************************************************/
+
+/*******************************************************************
+ * 变量定义
+ ******************************************************************/
+ //第一个节点
+ var FIRST_NODE_KET = 'NODE0001'
+ //节点
+ var NIBAN_NODE_KEY = 'NODE0002';
+ var  LEADER_NODE_KEY = 'NODE0004';
+ var  DEPT_NODE_KEY  = 'NODE0005';
+
+/*
+ * 领导意见
+ */
+// 领导意见表格ID
+var LEADER_OPINION_CELL_ID = '#C-10-4';
+// 领导意见历史表格ID
+var LEADER_OPINION_CELL_HISTORY_ID = '#C-10-4 &gt; div.cell-history';
+// 领导当前意见表格ID
+var LEADER_OPINION_CELL_CURRENT_ID = '#C-10-4 &gt; div.cell-current';
+// 领导个人意见表格ID
+var LEADER_OPINION_LIST_BUTTON_ID = '#C-11-8';
+
+/*
+ * 部门意见
+ */
+// 部门意见表格ID
+var DEPT_OPINION_CELL_ID = '#C-12-4';
+// 部门意见历史表格ID
+var DEPT_OPINION_CELL_HISTORY_ID = '#C-12-4 &gt; div.cell-history';
+// 部门当前意见表格ID
+var DEPT_OPINION_CELL_CURRENT_ID = '#C-12-4 &gt; div.cell-current';
+// 部门个人意见表格ID
+var DEPT_OPINION_LIST_BUTTON_ID = '#C-13-8';
+
+/*
+ * 全局变量
+ */
+// 意见表格ID
+var opinion_cell_id = '';
+// 意见历史表格ID
+var opinion_cell_history_id = '';
+// 当前意见表格ID
+var opinion_cell_current_id = '';
+// 个人意见表格ID
+var opinion_list_button_id = '';
+
+//原只读状态
+ var read_only_node_ids = [];
+// 显示编辑框
+var editFlag = true;
+// 显示拟办编辑框
+var nibanEditFlag = true;
+
+
+function onSheetLoad() {
+    // 添加全局样式
+	  AddCustomCss();
+    var nid = getQueryString('nid');
+    if(nid === 'NODE0001'){
+        var $ele = $("#C-5-4");
+        // 判断是否存在内容
+		if($ele.text() === undefined || $ele.text().length === 0){
+			$ele.text('〔〕');	
+		}
+        saveCell($ele);
+		// 定制显示来文单位
+		ShowUnitList();
+		// 显示来文文号列表
+		ShowReceiveNoList();
+    } 
+
+    // 领导的节点，自定义按钮
+	var isWkfRunnign = IsWkfRunning();
+	if(isWkfRunnign){
+		if(nid === LEADER_NODE_KEY || nid === DEPT_NODE_KEY){      
+		// 领导的节点，自定义按钮
+        // 检查页面中是否有代理按钮
+        btn_delegate_length =$("#btn-rehandle", top.document).text().length;
+		console.log($("#btn-rehandle", top.document).text().length);
+		if(nid === LEADER_NODE_KEY){
+			// 意见表格ID
+			opinion_cell_id = LEADER_OPINION_CELL_ID;
+			// 意见历史表格ID
+			opinion_cell_history_id = LEADER_OPINION_CELL_HISTORY_ID;
+			// 当前意见表格ID
+			opinion_cell_current_id = LEADER_OPINION_CELL_CURRENT_ID;
+			// 个人意见表格ID
+			opinion_list_button_id = LEADER_OPINION_LIST_BUTTON_ID;
+            // 如果没有委托，则显示意见等按钮
+            if(btn_delegate_length == 0){
+                addCustomButtons();
+                AddPrivateOpinion();
+            }
+		}else{
+		  // -- 部门承办
+		  // 意见表格ID
+		  opinion_cell_id = DEPT_OPINION_CELL_ID;
+		  // 意见历史表格ID
+		  opinion_cell_history_id = DEPT_OPINION_CELL_HISTORY_ID;
+		  // 当前意见表格ID
+		  opinion_cell_current_id = DEPT_OPINION_CELL_CURRENT_ID;
+		  // 个人意见表格ID
+		  opinion_list_button_id = DEPT_OPINION_LIST_BUTTON_ID;
+				// 如果没有委托，则显示意见等部分
+				if(btn_delegate_length == 0){
+					AddPrivateOpinion();
+				}
+			}  
+		}
+	}
+    
+
+     //当没有节点Id 所以处于只读状态 初始化按钮
+     var MessageID = getQueryString("mid");
+
+  // 将已有的科室审批意见清空
+    // initDeptCell(MessageID)
+  // 将已有的领导审批意见清空
+    initLeaderCell(MessageID)
+	// 初始化拟办意见cell
+	initNibanCell(MessageID)
+	
+    if( !nid &amp;&amp; typeof(nid)!="undefined" &amp;&amp; nid!=0 ){
+        // 意见表格ID
+        opinion_cell_id = LEADER_OPINION_CELL_ID;
+        // 意见历史表格ID
+        opinion_cell_history_id = LEADER_OPINION_CELL_HISTORY_ID;
+        // 当前意见表格ID
+        opinion_cell_current_id = LEADER_OPINION_CELL_CURRENT_ID;
+        // 个人意见表格ID
+        opinion_list_button_id = LEADER_OPINION_LIST_BUTTON_ID;
+
+        $.ajax({
+            url: '/Apps/Tiger/Workflow/GetHandledNodeKey',
+            type: 'POST',
+            data: { mid: MessageID },
+            async: false,
+            dataType:'json',
+            success: function(r) {
+                if(r.Succeed){
+                    read_only_node_ids = r.Data.nodekeys;
+                    initModify();
+					// 初始化拟办意见修改
+					initNibanModify();
+                }
+            }
+        });
+    }
+        
+
+};
+function onSheetCheck() {
+        var nodeId = getQueryString("nid");
+	if (nodeId === 'NODE0001') {
+		mappingData();
+	}
+};
+function onAnyCellUpdate() {
+};
+
+//初始化拟办意见cell
+function initNibanCell(MessageID){
+	var nibanSelector = '#C-8-4';
+
+	$.ajax({
+		url: "/Apps/Tiger/Workflow/GetNibanOpinion?MessageID=" + MessageID,
+		type: 'GET',
+		async: false,
+		dataType:'json',
+		success: function(r) {
+			// 检查是否有最新意见
+			if(r.Opinion != undefined &amp;&amp; r.Opinion.length &gt; 0){
+				$(nibanSelector).html("");
+				$(nibanSelector).html(r.Opinion);
+			}
+		}
+	});
+}
+
+
+ //初始化领导意见cell
+ function initLeaderCell(MessageID){    
+  var leaderSelector = LEADER_OPINION_CELL_HISTORY_ID;
+  if($(leaderSelector).text() == ""){
+    leaderSelector = LEADER_OPINION_CELL_ID;
+  }
+    $(leaderSelector).html("");
+    
+    $.ajax({
+        url: "/Apps/Tiger/Workflow?MessageID=" + MessageID,
+        type: 'GET',
+        async: false,
+        dataType:'json',
+        success: function(r) {
+            $(leaderSelector).html(r.history);
+			// 当前用户可签批时，应隐藏签批按钮
+			if(leaderSelector === LEADER_OPINION_CELL_HISTORY_ID){
+				$(".fa.fa-edit").hide();
+			}
+        }
+    });
+    
+  }
+
+
+//初始化部门审批意见  
+  function initDeptCell(MessageID){
+        var deptSelector = DEPT_OPINION_CELL_HISTORY_ID;
+        if($(deptSelector).text() == ""){
+            deptSelector = DEPT_OPINION_CELL_ID;
+        }
+        $(deptSelector).html("");
+
+        $.ajax({
+            url: "/Apps/Tiger/Workflow/DeptHistory?MessageID=" + MessageID + '&amp;RoleName=意见始终显示人员',
+            type: 'GET',
+            async: false,
+            dataType:'json',
+            success: function(r) {
+                $(deptSelector).html(r.history);
+            }
+        });
+  }
+
+
+//初始化 可以编辑的区域
+function initModify(){
+    //当存在领导节点的时候，让领导意见部分可以再次修改
+    if($.inArray(LEADER_NODE_KEY,read_only_node_ids) &gt;=0 ){
+
+        $(".my-opinion").on('click',function(){
+            addModifyTextArea(this)
+        })
+    }
+
+}
+
+//转换编辑区域
+function addModifyTextArea(opinionObj){
+    if(editFlag)
+    {
+        //首先清空该td的点击事件
+        var opinionVal = $(opinionObj).find('span').text();
+        $(opinionObj).find('span').hide();
+
+        //插入textarea 编辑框
+        var tarea = $("&lt;textarea /&gt;").width('95%').addClass("modify-leader");
+        tarea.val(opinionVal)
+        tarea.css({
+            'resize':'none',
+            'outline':'none',
+            'height':'100%'
+        })
+        $(opinionObj).append(tarea)
+        //添加提交按钮
+        $(opinionObj).append(addModifyButton())
+        $(opinionObj).append(addCancelButton())
+		// 隐藏编辑图标
+		$(".fa.fa-edit").hide();
+        $('.my-opinion').unbind('click');
+    }
+    else
+    {
+        editFlag = true;
+		// 显示编辑图标
+		$(".fa.fa-edit").show();
+    }
+}
+
+//添加修改的保存按钮
+function  addModifyButton(){
+   //创建保存按钮
+    var modify_button = document.createElement('A');
+    modify_button.textContent = "保存修改"
+    modify_button.setAttribute("id","btn-read-only-modify");
+    modify_button.onclick = function(){
+        // 流程ID
+        var MessageID = getQueryString("mid");
+		// 排序
+		var order = $('.my-opinion').attr("order");
+		if(order === undefined)
+		{
+			order = "";
+		}
+        // 获取
+        var opinion = $(".modify-leader").val();
+        $.ajax({
+            url: '/Apps/Tiger/Workflow/AddNewOpinion',
+            type: 'POST',
+            data: { mid: MessageID ,nid:LEADER_NODE_KEY,opinion:opinion, order:order},
+            async: false,
+            dataType:'json',
+            success: function(r) {
+                if(r.Succeed){
+                    top.location.href = '/Apps/Workflow/Running/Open?mid={0}'.format(MessageID); 
+                }
+            }
+        });
+
+
+    }
+  return modify_button
+}
+
+//添加修改的取消按钮
+function addCancelButton(){
+ 
+    var c_button = document.createElement('A');
+    c_button.textContent = "取消"
+    c_button.setAttribute("id","btn-modify-cancel");
+    c_button.onclick = function(){
+        editFlag = false;
+        $('.my-opinion').find('textarea').remove();
+        $('.my-opinion').find('a').remove();
+        $('.my-opinion').find('span').show(); 
+        $(".my-opinion").on('click',function(){
+            addModifyTextArea(this)
+        });
+    }
+    return c_button
+}
+
+/************************** 拟办意见修改 *********************************/
+//初始化 可以编辑的区域
+function initNibanModify(){
+    //当存在领导节点的时候，让领导意见部分可以再次修改
+    if($.inArray(NIBAN_NODE_KEY,read_only_node_ids) &gt;=0 ){
+        $(".my-niban-opinion").on('click',function(){
+            addNibanModifyTextArea(this)
+        })
+    }
+}
+
+//转换编辑区域
+function addNibanModifyTextArea(opinionObj){
+    if(nibanEditFlag)
+    {
+        //首先清空该td的点击事件
+        var opinionVal = $(opinionObj).find('span').text();
+        $(opinionObj).find('span').hide();
+
+        //插入textarea 编辑框
+        var tarea = $("&lt;textarea /&gt;").width('95%').addClass("modify-niban");
+        tarea.val(opinionVal)
+        tarea.css({
+            'resize':'none',
+            'outline':'none',
+            'height':'100%'
+        })
+        $(opinionObj).append(tarea)
+        //添加提交按钮
+        $(opinionObj).append(addNibanModifyButton())
+        $(opinionObj).append(addNibanCancelButton())
+		// 隐藏编辑图标
+		$(".fa.fa-edit").hide();
+        $('.my-niban-opinion').unbind('click');
+    }
+    else
+    {
+        nibanEditFlag = true;
+		// 显示编辑图标
+		$(".fa.fa-edit").show();
+    }
+}
+
+//添加修改的保存按钮
+function  addNibanModifyButton(){
+   //创建保存按钮
+    var niban_modify_button = document.createElement('A');
+    niban_modify_button.textContent = "保存修改"
+    niban_modify_button.setAttribute("id","btn-read-only-modify");
+    niban_modify_button.onclick = function(){
+        // 流程ID
+        var MessageID = getQueryString("mid");
+        // 获取
+        var opinion = $(".modify-niban").val();
+        $.ajax({
+            url: '/Apps/Tiger/Workflow/AddNewNibanOpinion',
+            type: 'POST',
+            data: { mid: MessageID, opinion:opinion},
+            async: false,
+            dataType:'json',
+            success: function(r) {
+                if(r.Succeed){
+                    top.location.href = '/Apps/Workflow/Running/Open?mid={0}'.format(MessageID); 
+                }
+            }
+        });
+
+
+    }
+	return niban_modify_button
+}
+
+//添加修改的取消按钮
+function addNibanCancelButton(){
+ 
+    var niban_c_button = document.createElement('A');
+    niban_c_button.textContent = "取消"
+    niban_c_button.setAttribute("id","btn-modify-cancel");
+    niban_c_button.onclick = function(){
+        nibanEditFlag = false;
+        $('.my-niban-opinion').find('textarea').remove();
+        $('.my-niban-opinion').find('a').remove();
+        $('.my-niban-opinion').find('span').show(); 
+        $(".my-niban-opinion").on('click',function(){
+            addNibanModifyTextArea(this)
+        });
+    }
+    return niban_c_button
+}
+
+/*************************************************************************/
+
+//设定序列号
+function setSerialNumber() {
+    //获取收文类型
+    var fileType = getCellValue(5,8);
+    $.get( '/Apps/Archives/ReadOrDo/GetDoNumber',
+          {name:fileType},
+          function(result){
+          var $ele = $("#C-5-9");
+          $ele.text(result);
+          saveCell($ele);
+          });
+    
+};
+// 获取url中的参数
+function getQueryString(name) {
+    var reg = new RegExp("(^|&amp;)" + name + "=([^&amp;]*)(&amp;|$)", "i"); // 匹配目标参数
+    var result = window.location.search.substr(1).match(reg); // 对querystring匹配目标参数
+    if (result != null) {
+        return decodeURIComponent(result[2]);
+    } else {
+        return null;
+    }
+};
+
+// 映射数据
+function mappingData() {
+    var ReceivedDocumentUnit = getCellValue(4,4);
+    var ClosedOrHairTime = getCell(4,8).data('ival');
+    var DocumentNumber = $('#C-5-4').text(); //getCellValue(5,4);
+    var SequenceName = $('#C-5-8').text(); //getCellValue(5,8);
+    var SequenceNumber = $('#C-5-9').text(); //getCellValue(5,9);
+    var DocumentTitle = $('#C-6-4').text(); //getCellValue(6,4);
+    var MessageId = getQueryString('mid');
+    
+    var param = {
+    ReceivedDocumentUnit: ReceivedDocumentUnit,
+    ClosedOrHairTime: ClosedOrHairTime,
+    DocumentNumber: DocumentNumber,
+    SequenceName: SequenceName,
+    SequenceNumber: SequenceNumber,
+    DocumentTitle: DocumentTitle,
+    MessageId: MessageId,
+    WorkFlowId: 'f90b3ea8-21ee-4239-9a8f-f7698c7ae027',
+    };
+    $.post( '/Apps/Archives/WorkFlowPage/UpdateReceiveInfo',
+           param,
+           function(result){
+           console.log('数据映射成功！');
+           });
+};
+/******************************************************************************************
+ *              覆盖默认的提交事件
+ ******************************************************************************************/
+function OverrideSubmit(){
+    // TODO： 判断是否需要覆盖默认的提交操作
+    // 流程ID
+    var MessageID = getQueryString("mid");
+    // 节点ID
+    var FromNodeKey = getQueryString("nid");
+    // 前一个节点
+    var NodeKey = 'NODE0003';
+    
+    // 获取下一个提交人
+    $.ajax({
+           type: 'GET',
+           url: '/Apps/Tiger/Workflow/MessageHandle?MessageID='+MessageID+'&amp;NodeKey='+NodeKey+'&amp;FromNodeKey='+FromNodeKey,
+           success: function(result){
+           console.log(result);
+           Send(MessageID, NodeKey, FromNodeKey, result.Data.empl);
+           }
+           });
+}
+
+function Send(MessageID, NodeKey, FromNodeKey, empl){
+    $.ajax({
+        type: 'POST',
+        url: '/Apps/Workflow/Running/Send',
+        data: {
+			'mid':MessageID,
+			'nid':FromNodeKey,
+			'targets':'[{"node":"{0}","empl":"{1}","mode":"","memo":""}]'.format(NodeKey, empl),
+			'memo':'',
+			'memoAtts':[],
+			'digitCertData':'',
+			'digitSourceData':'',
+			'digitSignedData':''
+        },
+        success: function(result){
+			// 发送通知，使用无效nodekey，略过设置提醒节点
+			var pdata = {}
+			pdata.nlist = $.json2str('[]')
+			pdata.nodekey = FromNodeKey;
+			pdata.mid = MessageID	
+
+			$.ajax({
+				url: '/Apps/Tiger/Workflow/AddNotifyRecord',
+				type: 'POST',
+				data:pdata,
+				async: false,
+				dataType: 'json',
+				success: function(r) {
+					console.log(r)
+				}
+			});
+			console.log(result);
+			// 刷新网页
+           top.location.href = '/Apps/Workflow/Running/Open?mid={0}&amp;sendsucc=1'.format(MessageID);
+        },
+        error: function(error){
+           console.log(error);
+        }
+    })
+}
+
+// 设置Cell值
+// worksheet id
+function SaveCellData(sid, nid, row, col, val, ival){
+    $.ajax({
+           type: 'POST',
+           url: '/Apps/Workflow/Worksheet/SaveCell',
+           data: {
+           'sid': sid,
+           'nid': nid,
+           'row': row,
+           'col': col,
+           'val': val,
+           'ival': ival
+           },
+           success: function(result){
+           console.log(result);
+           },
+           error: function(error){
+           console.log(error);
+           }
+           });
+}
+
+function addCustomButtons() {
+    // 自定义顶部按钮
+    var btn_submit = $('#btn-submit', top.document);
+    var title_bar = $('#titlebar &gt; ul', top.document);
+    
+    // 隐藏原先的提交按钮
+    btn_submit.hide();
+    // 创建已阅按钮
+    var read_li = document.createElement('LI');
+    var read_button = document.createElement('BUTTON');
+    read_button.setAttribute("id", "btn-custom-read");
+    read_button.onclick = function(){
+        SaveCellData(worksheet_id, getQueryString('nid'), 10, 4, '已阅', '');
+        OverrideSubmit();
+    };
+    var i = document.createElement('I');
+    i.className = 'fa fa-send';
+    i.textContent = ' 已阅';
+    read_button.appendChild(i);
+    read_li.appendChild(read_button);
+    // 创建提交按钮
+    var submit_li = document.createElement('LI');
+    var submit_button = document.createElement('BUTTON');
+    submit_button.setAttribute("id", "btn-custom-send");
+    submit_button.onclick = function(){OverrideSubmit()};
+    var i = document.createElement('I');
+    i.className = 'fa fa-send';
+    i.textContent = ' 提交';
+    submit_button.appendChild(i);
+    submit_li.appendChild(submit_button);
+    title_bar.prepend(submit_li);
+    title_bar.prepend(read_li);
+}
+
+/******************************************************************************************
+ *              个人意见部分
+ ******************************************************************************************/
+// 插入【添加】按钮
+function addInsertSelfButton(){
+    // 获得表单
+    $("#tbSheet").css('position', 'relative');
+    $(opinion_cell_id).after('&lt;button onClick="AddPrivateOpinionToDB()" style="position:absolute;right:55px;border-radius:4px;border:1px solid #28a4c9;padding:3px 12px;font-size:14px;color:#fff;background-color:#5bc0de;"&gt;添加个人意见&lt;/button&gt;');
+}
+// 意见插入
+function opinionChanged(id){
+    var opinion = $(id).text();
+    InsertMultiOpinion(opinion);
+    ResetPublicOpinion(id);
+}
+
+// 插入多人意见方法
+function InsertMultiOpinion(opinion){
+    var selector = opinion_cell_history_id;
+    if($(selector).text() == ""){
+        selector = opinion_cell_id;
+    } else {
+        selector = opinion_cell_current_id;
+    }
+    $(selector).html(opinion);
+    nid = getQueryString("nid");
+    if(nid === LEADER_NODE_KEY){
+        SaveCellData(worksheet_id, getQueryString('nid'), 10, 4, opinion, '');
+    }else if(nid === DEPT_NODE_KEY){
+        SaveCellData(worksheet_id, getQueryString('nid'), 12, 4, opinion, '');
+    }
+    
+}
+// 插入个人意见列表
+function AddPrivateOpinion(){
+    ShowPrivateOpinion();
+    $(opinion_list_button_id).attr('class', 'a-c b-l b-r b-t b-b drop control1');
+    // 设置点击事件
+    $(opinion_list_button_id).click(function(event){
+                                    console.log(event.target);
+                                    var privateOpinion = $("#privateOpinion");
+                                    privateOpinion.toggle();
+                                    });
+    // 设置li点击事件
+    $(document).on('click', "#privateOpinion &gt; ul &gt; li", function(event){
+                   console.log(event.target);
+                   console.log($(this).text());
+                   if(event.target.id !== 'deleteMe'){
+                   var opinion = $(this).contents().filter(function(){return this.nodeType==3;})[0].nodeValue;
+                   $("#selectedPrivateOpinion").html(opinion);
+                   InsertMultiOpinion(opinion);
+                   }
+                   });
+    // 添加【添加个人意见按钮]
+    addInsertSelfButton();
+    // 个人意见删除按钮
+    $(document).on('click','#deleteMe',function(event){
+                   event.stopPropagation();
+                   event.preventDefault();
+                   console.log($(this).attr('opinionid'));
+				   // 判断是否需要删除
+					var selectedOpinionText = $('{0} &gt; span'.format(opinion_list_button_id)).text();
+					var parentClone = $(this).parent('li').clone();
+					parentClone.find('button').remove();
+					var deleteOpinionText = parentClone.text();
+					if(deleteOpinionText === selectedOpinionText)
+					{
+						$(opinion_list_button_id).text("");
+					}
+                   DeletePrivateOpinionFromDB($(this).attr('opinionid'));
+                   });
+}
+
+// 插入个人意见列表
+function ShowPrivateOpinion(){
+    $.get('/Apps/Tiger/Opinion/GetPrivateOpinion', function(result){
+          // 首先移除旧的意见列表
+          if($("#privateOpinion").length &gt; 0){
+          $("#privateOpinion").remove();
+          }
+          var div = document.createElement('DIV');
+          div.id = 'privateOpinion';
+          div.style = 'cursor: pointer;overflow: visible;position: relative;left: -4px;top: 15px; display: none;z-index:999;';
+          var ul = document.createElement('UL');
+          ul.style = ' list-style: none; margin: 0px; padding: 0px; border: 1px solid #000; background-color: #fff; position: absolute; max-height: 160px; overflow: auto; text-align: left;';
+          result.Data.opinions.forEach(function(item){
+                                       // item
+                                       var li = document.createElement('LI');
+                                       li.style = 'padding: 4px 16px 4px 4px; white-space: nowrap; border-bottom: 1px solid #888;';
+                                       li.textContent = item.content;
+                                       // 删除按钮
+                                       var deleteButton = document.createElement('BUTTON');
+                                       deleteButton.id = "deleteMe";
+                                       deleteButton.textContent = "删除";
+                                       deleteButton.setAttribute("opinionId", item.id);
+                                       deleteButton.setAttribute('style', 'margin-right:5px;border-radius:4px;border: 1px solid #28a4c9;padding:5px 12px;font-size:14px;color:#fff;background-color:#5bc0de;');
+                                       li.prepend(deleteButton);
+                                       ul.append(li);
+                                       });
+          div.append(ul);
+          $(opinion_list_button_id).append(div);
+          // Span元素，显示选中的值
+          var span = document.createElement('SPAN');
+          span.id = 'selectedPrivateOpinion';
+          $(opinion_list_button_id).append(span);
+          });
+}
+// 添加内容到个人意见
+function AddPrivateOpinionToDB(){
+    var selector = opinion_cell_history_id;
+    if($(selector).text() == ""){
+        selector = opinion_cell_id;
+    } else {
+        selector = opinion_cell_current_id;
+    }
+    var privateOpinion = $(selector).html();
+    // 调用接口
+    $.ajax({
+           type: 'POST',
+           url: '/Apps/Tiger/Opinion/AddPrivateOpinion',
+           data: {'content': privateOpinion},
+           success: function(result){
+           ShowPrivateOpinion();
+           alert("个人意见添加成功");
+           },
+           error: function(error){
+           console.log(error);
+           }
+           });
+    
+}
+// 从DB中删除个人意见
+function DeletePrivateOpinionFromDB(id){
+    $.ajax({
+           type: 'POST',
+           url: '/Apps/Tiger/Opinion/RemovePrivateOpinion',
+           data: {'id': id},
+           success: function(result){
+           ShowPrivateOpinion();
+           alert("删除成功");
+           },
+           error: function(error){
+           console.log("删除失败");
+           }
+           });
+}
+// 重置选择后的表格
+function ResetPublicOpinion(id){
+    splitArray = id.split('-');
+    SaveCellData(worksheet_id, getQueryString('nid'), splitArray[1], splitArray[2], '', '');
+}
+
+/**************************************************************************
+ * 工具类方法
+ *************************************************************************/
+function IsWkfRunning(){
+	var wkfStatus = $("#left-panel &gt; p:nth-child(3) &gt; span", top.document).text();
+	if(wkfStatus === '已完成'){
+		return false;
+	} else {
+		return true;
+	}
+}
+/**************************************************************************
+ * 添加全局样式，修复弹出框被文件选择框挡住的问题
+ *************************************************************************/
+function AddCustomCss(){
+	// 修复弹出框被文件选择框挡住的问题
+  var styleTag = $('&lt;style&gt;.DropDown { z-index: 999; } .my-niban-opinion a, .my-opinion a {display:inline-block; margin-right: 10px;border: 1px solid #337ab7;font-size: 13px;padding: 3px 5px;margin-bottom: 10px;margin-left:15px;} .my-niban-opinion textarea, .my-opinion textarea { margin-top: 3px;margin-left: 15px;} #receiveNo &gt; ul &gt; li:hover,div#unit &gt; ul &gt; li:hover {background: rgb(207,229,239);}&lt;/style&gt;')
+
+	$('html &gt; head').append(styleTag);
+	// 表单居中
+	$("#tbSheet").css('margin-left', '-71px');
+	$("#page").css('display', 'flex');
+	$("#page").css('width', '100%');
+	$("#page").css('height', '100%');
+	$("#page").css('justify-content', 'center');
+}
+
+/*************************************************************************
+ * 自定义输入/选择控件
+ ************************************************************************/
+// 来文单位列表
+function ShowUnitList(){
+	$("#tbSheet").css('position', 'relative');
+	var div = document.createElement('DIV');
+	div.id = 'unit';
+	div.style = 'cursor: pointer;overflow: visible;position: absolute;left: 179px;top: 200px;display: none;z-index:999;';
+	var ul = document.createElement('UL');
+	ul.style = ' list-style: none; margin: 0px; padding: 0px; border: 1px solid #000; background-color: #fff; position: absolute; max-height: 160px; overflow: auto; text-align: left; width: 347px;';
+	units = [
+		{'content': '中共无锡市委'},
+		{'content': '中共无锡市委办公室'},
+		{'content': '无锡市人民政府'},
+		{'content': '无锡市人民政府办公室'},
+		{'content': '中共江苏省委'},
+		{'content': '中共江苏省委办公厅'},
+		{'content': '江苏省人民政府'},
+		{'content': '江苏省人民政府办公厅'},
+		{'content': '中共中央国务院'},
+		{'content': '江苏省物价局 江苏调查总队'},
+		{'content': '无锡市河长制工作办公室'},
+		{'content': '无锡市太湖蓝藻打捞工作协调小组办公室'},
+		{'content': '省大气污染防治联席会议办公室'},
+		{'content': '无锡市环境保护委员会办公室'},
+		{'content': '无锡市太湖水污染防治办公室'}
+	]
+	
+	units.forEach(function(item){
+		// item
+		var li = document.createElement('LI');
+		li.style = 'padding: 4px 16px 4px 4px; white-space: nowrap; border-bottom: 1px solid #888;hover:red;';
+		li.textContent = item.content;
+		ul.append(li);
+	});
+	div.append(ul);
+	$('#C-4-8').after(div);
+	
+	var showUnitButton = document.createElement('BUTTON');
+	showUnitButton.id = "showUnitButton";
+	showUnitButton.onclick = function(){
+		// $('#unit').toggle();
+		var display = $('#unit').css('display');
+		if(display === 'none'){
+			$('#unit').css('display', 'block');
+		} else {
+			$('#unit').css('display', 'none');
+		}
+	};
+	showUnitButton.style = 'height:72px;position:absolute;right:483px;border:none;outline:none;padding:3px 12px;font-size:14px; background: url(/Apps/Workflow/images/drop.png) no-repeat right center;';
+
+	$('#C-4-8').after(showUnitButton);
+	
+	// 设置li点击事件
+	$(document).on('click', "#unit &gt; ul &gt; li", function(event){
+		console.log(event.target);
+		console.log($(this).text());
+		if(event.target.id !== 'deleteMe'){
+			var opinion = $(this).contents().filter(function(){return this.nodeType==3;})[0].nodeValue;
+			$("#C-4-4").text(opinion);
+			SaveCellData(worksheet_id, getQueryString('nid'), 4, 4, opinion, '');
+			$("#unit").css('display', 'none');
+		}
+	});
+	$("#tbSheet td").delegate('.EditBox', 'focusout', function () {
+		$("#unit").css('display', 'none');
+	});
+	$("#tbSheet td").click(function () {
+		$("#unit").css('display', 'none');
+	});
+}
+
+// 来文文号列表
+function ShowReceiveNoList(){
+	$("#tbSheet").css('position', 'relative');
+	var div = document.createElement('DIV');
+	div.id = 'receiveNo';
+	div.style = 'cursor: pointer;overflow: visible;position: absolute;right: 333px;top: 270px;display: none;z-index:999;';
+	var ul = document.createElement('UL');
+	ul.style = ' list-style: none; margin: 0px; padding: 0px; border: 1px solid #000; background-color: #fff; position: absolute; max-height: 160px; overflow: auto; text-align: left; width: 161px;';
+	units = [
+		{'content': '中央来文'},
+		{'content': '国务院来文'},
+		{'content': '中办国办来文'},
+		{'content': '国家级其他来文'},
+		{'content': '省委来文'},
+		{'content': '省政府来文'},
+		{'content': '省两办来文'},
+		{'content': '省其他来文'},
+		{'content': '市委来文'},
+		{'content': '市政府来文'},
+		{'content': '市两办来文'},
+		{'content': '市其他来文'},
+		{'content': '区级请示来文'},
+		{'content': '区级其他来文'},
+		{'content': '领导批示'},
+		{'content': '同级来文'}
+	]
+	
+	units.forEach(function(item){
+		// item
+		var li = document.createElement('LI');
+		li.style = 'padding: 4px 16px 4px 4px; white-space: nowrap; border-bottom: 1px solid #888;hover:red;';
+		li.textContent = item.content;
+		ul.append(li);
+	});
+	div.append(ul);
+	$('#C-5-9').after(div);
+	
+	var showReceiveNoButton = document.createElement('BUTTON');
+	showReceiveNoButton.id = "showReceiveNoButton";
+	showReceiveNoButton.onclick = function(){
+		var display = $('#receiveNo').css('display');
+		if(display === 'none'){
+			$('#receiveNo').css('display', 'block');
+		} else {
+			$('#receiveNo').css('display', 'none');
+		}
+	};
+	showReceiveNoButton.style = 'height:72px;position:absolute;right:178px;border:none;outline:none;padding:3px 12px;font-size:14px; background: url(/Apps/Workflow/images/drop.png) no-repeat right center;';
+
+	$('#C-5-9').after(showReceiveNoButton);
+	
+	// 设置li点击事件
+	$(document).on('click', "#receiveNo &gt; ul &gt; li", function(event){
+		console.log(event.target);
+		console.log($(this).text());
+		if(event.target.id !== 'deleteMe'){
+			var opinion = $(this).contents().filter(function(){return this.nodeType==3;})[0].nodeValue;
+			$("#C-5-8").text(opinion);
+			SaveCellData(worksheet_id, getQueryString('nid'), 5, 8, opinion, '');
+			$("#receiveNo").css('display', 'none');
+			// 设置SerialNumber
+			setSerialNumber();
+			// 开始映射
+			mappingData();
+		}
+	});
+	$("#tbSheet td").delegate('.EditBox', 'focusout', function () {
+		$("#receiveNo").css('display', 'none');
+	});
+	$("#tbSheet td").click(function () {
+		$("#receiveNo").css('display', 'none');
+	});
+}</Script>
+  </Worksheets>
+</Template>
