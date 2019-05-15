@@ -2,7 +2,7 @@
   <Messages>
     <MessageID>6f1f4d88-8656-417e-9e95-5dd737930b7b</MessageID>
     <MessageTitle>投诉</MessageTitle>
-    <MessageCreateTime>2019/5/13 15:54:49</MessageCreateTime>
+    <MessageCreateTime>2019/5/14 18:35:21</MessageCreateTime>
     <MessageFinishTime>2019/5/13 13:28:48</MessageFinishTime>
     <MessageTimeLimit></MessageTimeLimit>
     <MessageFinishTimeExpected>2019/5/13 13:28:48</MessageFinishTimeExpected>
@@ -56,7 +56,7 @@
     <OutTime>2019/5/13 13:30:02</OutTime>
     <TimeLimit></TimeLimit>
     <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
-    <SendMode>0</SendMode>
+    <SendMode>1</SendMode>
     <MultiHandleMode>0</MultiHandleMode>
     <MultiProcessMode>1</MultiProcessMode>
     <EntrustBy></EntrustBy>
@@ -82,7 +82,7 @@
     <OutTime>2019/5/13 13:30:18</OutTime>
     <TimeLimit></TimeLimit>
     <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
-    <SendMode>0</SendMode>
+    <SendMode>1</SendMode>
     <MultiHandleMode>0</MultiHandleMode>
     <MultiProcessMode>1</MultiProcessMode>
     <EntrustBy></EntrustBy>
@@ -108,7 +108,7 @@
     <OutTime>2019/5/13 13:30:40</OutTime>
     <TimeLimit></TimeLimit>
     <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
-    <SendMode>0</SendMode>
+    <SendMode>1</SendMode>
     <MultiHandleMode>0</MultiHandleMode>
     <MultiProcessMode>1</MultiProcessMode>
     <EntrustBy></EntrustBy>
@@ -134,7 +134,7 @@
     <OutTime>2019/5/13 13:30:58</OutTime>
     <TimeLimit></TimeLimit>
     <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
-    <SendMode>0</SendMode>
+    <SendMode>1</SendMode>
     <MultiHandleMode>0</MultiHandleMode>
     <MultiProcessMode>1</MultiProcessMode>
     <EntrustBy></EntrustBy>
@@ -160,7 +160,7 @@
     <OutTime>2019/5/13 13:31:15</OutTime>
     <TimeLimit></TimeLimit>
     <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
-    <SendMode>0</SendMode>
+    <SendMode>1</SendMode>
     <MultiHandleMode>0</MultiHandleMode>
     <MultiProcessMode>1</MultiProcessMode>
     <EntrustBy></EntrustBy>
@@ -186,7 +186,7 @@
     <OutTime>2019/5/13 13:31:46</OutTime>
     <TimeLimit></TimeLimit>
     <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
-    <SendMode>0</SendMode>
+    <SendMode>1</SendMode>
     <MultiHandleMode>0</MultiHandleMode>
     <MultiProcessMode>1</MultiProcessMode>
     <EntrustBy></EntrustBy>
@@ -212,7 +212,7 @@
     <OutTime>2019/5/13 13:32:16</OutTime>
     <TimeLimit></TimeLimit>
     <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
-    <SendMode>0</SendMode>
+    <SendMode>1</SendMode>
     <MultiHandleMode>0</MultiHandleMode>
     <MultiProcessMode>1</MultiProcessMode>
     <EntrustBy></EntrustBy>
@@ -238,7 +238,7 @@
     <OutTime>2019/5/13 13:32:34</OutTime>
     <TimeLimit></TimeLimit>
     <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
-    <SendMode>0</SendMode>
+    <SendMode>1</SendMode>
     <MultiHandleMode>0</MultiHandleMode>
     <MultiProcessMode>1</MultiProcessMode>
     <EntrustBy></EntrustBy>
@@ -562,7 +562,7 @@
     <Control>1</Control>
   </NodeField>
   <NodeAction>
-    <NodeActionID>4092</NodeActionID>
+    <NodeActionID>23379</NodeActionID>
     <MessageID>6f1f4d88-8656-417e-9e95-5dd737930b7b</MessageID>
     <NodeKey>NODE0001</NodeKey>
     <NodeActionName>映射表数据</NodeActionName>

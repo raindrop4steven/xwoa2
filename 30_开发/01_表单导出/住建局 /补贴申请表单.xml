@@ -2,7 +2,7 @@
   <Messages>
     <MessageID>0157fcbc-513f-49ab-90e8-c23cda58f750</MessageID>
     <MessageTitle>补贴申请表单</MessageTitle>
-    <MessageCreateTime>2019/5/10 11:09:07</MessageCreateTime>
+    <MessageCreateTime>2019/5/14 18:35:04</MessageCreateTime>
     <MessageFinishTime>2018/8/17 11:00:00</MessageFinishTime>
     <MessageTimeLimit></MessageTimeLimit>
     <MessageFinishTimeExpected>2018/8/17 11:00:00</MessageFinishTimeExpected>
@@ -276,7 +276,7 @@
     <Control>1</Control>
   </NodeField>
   <NodeAction>
-    <NodeActionID>4064</NodeActionID>
+    <NodeActionID>23376</NodeActionID>
     <MessageID>0157fcbc-513f-49ab-90e8-c23cda58f750</MessageID>
     <NodeKey>NODE0001</NodeKey>
     <NodeActionName>映射表数据</NodeActionName>
