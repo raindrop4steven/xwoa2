@@ -58,7 +58,7 @@ function main() {
                 {'content': '无锡市太湖水污染防治办公室'}
             ]
             // 定制显示来文单位
-            ShowUnitList("unit", "165px", "362px", "306px", "72px", "483px", options, '#C-4-8', '#C-4-4');
+            ShowUnitList("unit", "165px", "200px", "362px", "72px", "483px", options, '#C-4-8', '#C-4-4');
         }
     }
 }
