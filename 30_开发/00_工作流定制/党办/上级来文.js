@@ -806,7 +806,8 @@ function ShowUnitList(){
 		{'content': '无锡市太湖蓝藻打捞工作协调小组办公室'},
 		{'content': '省大气污染防治联席会议办公室'},
 		{'content': '无锡市环境保护委员会办公室'},
-		{'content': '无锡市太湖水污染防治办公室'}
+        {'content': '无锡市太湖水污染防治办公室'},
+        {'content': '市推进政府职能转变和“放管服”改革协调小组办'}
 	]
 	
 	units.forEach(function(item){
