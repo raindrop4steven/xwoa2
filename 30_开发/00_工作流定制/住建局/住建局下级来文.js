@@ -50,7 +50,7 @@ function main() {
 			{'content': '下级其他'}
 		]
 		// 定制显示来文单位
-		ShowUnitList("receiveNo", "672px", "269px", "161px", "72px", "178px", options, '#C-5-9', '#C-5-8');
+		ShowUnitList("receiveNo", "672px", "269px", "161px", "72px", "178px", options, '#C-5-9', '#C-5-8', null);
 	}
 
 	var getBackNodeKey = $('#divGetback > input', top.document).attr('value');
