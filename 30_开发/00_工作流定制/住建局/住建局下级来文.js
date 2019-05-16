@@ -41,7 +41,7 @@ function main() {
 
 		saveCell($ele);
 		// 自定义控件
-		ShowDeptList();
+		ShowDeptList("divChooseDept", "72px", "483px", "#C-4-8", "#C-4-4");
 	}
 	if(nid === SECOND_NODE_KEY){
 		// ShowReceiveNoList();
@@ -138,48 +138,4 @@ function loadScripts(array,callback){
             callback && callback();
         }
     })();
-}
-/*************************************************************************
- * 自定义输入/选择控件
- ************************************************************************/
-function ShowDeptList(){
-	$("#tbSheet").css('position', 'relative');
-	// 添加按钮
-	var showUnitButton = document.createElement('BUTTON');
-	showUnitButton.id = "showUnitButton";
-		showUnitButton.style = 'height:72px;position:absolute;right:483px;border:none;outline:none;padding:3px 12px;font-size:14px; background: url(/Apps/Workflow/images/drop.png) no-repeat right center;';
-	showUnitButton.onclick = function(){
-		$('#divChooseDept').empty().load('/Apps/People/Shared/GetDepartment.aspx?cr=0&rp=&cbx=true').dialog('open');
-		return;	
-	};
-	$('#C-4-8').after(showUnitButton);
-	
-	//添加选择部门的页面
-	$(document.body).append('<div id="divChooseDept" ></div>')  
-	$('#divChooseDept').dialog({
-		title: '选择部门', autoOpen: false, modal: true, width: 750, height: 600, resizable: false,
-		beforeClose: function() { $('#divDept').empty(); },
-		buttons:[{
-			text: '确定', click: function () {
-				try {
-					var depts = getSelectedDept();
-					var resultDepts = [];
-					for(i=0 ;i < depts.length ;i++){
-						resultDepts.push(depts[i].name);
-					}
-					var deptstr = resultDepts.join(',');
-					$('#C-4-4').text(deptstr);
-					SaveCellData(worksheet_id, getQueryString('nid'), 4, 4, deptstr, '');
-					$('#divChooseDept').dialog('close');
-				} catch (e) {
-					alert('出错，请刷新页面。' + '\r\n' + e.message);
-					location.reload();	  
-				}
-			}},
-			{
-				text: '取消', click: function () {
-					$('#divChooseDept').dialog('close');
-				}
-			}]
-	}); 
 }
