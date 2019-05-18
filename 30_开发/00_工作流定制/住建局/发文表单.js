@@ -33,6 +33,9 @@ function main() {
         // 覆盖默认保存草稿操作
         onSaveDraft();
 
+        // 个人意见修改
+        GetOpinionConfig(MessageID, nid);
+
         if(nid === 'NODE0001'){
             options = [
                 {'content': '中共无锡市委'},
