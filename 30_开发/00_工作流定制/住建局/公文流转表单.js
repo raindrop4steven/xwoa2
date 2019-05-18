@@ -35,7 +35,11 @@ function main() {
         // 个人意见修改
         GetOpinionConfig(MessageID, nid);
         // 初始化修改意见
-        initChangeOpinionCell(MessageID);
+        initChangeOpinionCell(MessageID, function(mid, nid, type){
+            console.log(mid);
+            console.log(nid);
+            console.log(type);
+        });
         // 初始化自定义按钮
         RenderCustomButton(MessageID);
 
