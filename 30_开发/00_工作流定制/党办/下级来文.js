@@ -161,6 +161,8 @@ function onSheetLoad() {
 			}
 		});
 	}
+
+	addSubWorkflowButton();
 };
 
 
@@ -927,4 +929,62 @@ function ShowReceiveNoList(){
 	$("#tbSheet td").click(function () {
 		$("#receiveNo").css('display', 'none');
 	});
+}
+
+/*************************************************************************
+ * 子流程
+ *************************************************************************/
+// 启动子流程
+function startSubflow(){
+    var mid = getQueryString("mid");
+    var node = getQueryString("nid");
+
+    $.ajax({
+        url: '/Apps/DEP/Workflow/StartSubflow',
+        type: 'POST',
+        data: {
+            'mid': mid,
+            'nid': node
+        },
+        success:function(data){
+            if(data.Succeed){
+                // 在新页面打开流程
+                window.open(data.Data.Url, '_blank');
+            }
+        },
+        error:function(error){
+            console.log(error);
+        }
+    })
+}
+
+// 添加子流程启动按钮
+function addSubWorkflowButton(){
+    // 判断当前用户是否具有发起子流程权限
+    $.ajax({
+        url: '/Apps/DEP/Workflow/CheckSubflowPerm',
+        type: 'GET',
+        success:function(data){
+            if(data.Data.havePermission){
+                var title_bar = $('#titlebar > ul', top.document);
+                // 创建子流程按钮
+                var subWorkflow_li = document.createElement('LI');
+                var subWorkflowButton = document.createElement('BUTTON');
+                subWorkflowButton.setAttribute("id", "btn-custom-sub-workflow");
+                subWorkflowButton.onclick = function(){
+                    startSubflow();
+                };
+                var i = document.createElement('I');
+                i.className = 'fa fa-upload';
+                i.textContent = '  启动部门流程';
+                subWorkflowButton.appendChild(i);
+                subWorkflow_li.appendChild(subWorkflowButton);
+                
+                title_bar.prepend(subWorkflow_li);
+            }
+        },
+        error:function(error){
+            console.log(error);
+        }
+    })
 }
