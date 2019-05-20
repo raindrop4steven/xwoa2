@@ -39,11 +39,11 @@ function main() {
         // 个人意见修改
         GetOpinionConfig(MessageID, nid);
         // 初始化修改意见
-        initChangeOpinionCell(MessageID, function(mid, nid, type){
-            console.log(mid);
-            console.log(nid);
-            console.log(type);
-        });
+        // initChangeOpinionCell(MessageID, function(mid, nid, type){
+        //     console.log(mid);
+        //     console.log(nid);
+        //     console.log(type);
+        // });
         // 初始化自定义按钮
         RenderCustomButton(MessageID);
 
@@ -90,6 +90,7 @@ function main() {
             ShowUnitList("receiveNo", "672px", "269px", "161px", "72px", "178px", DocumentNoOptions, '#C-5-9', '#C-5-8', null);
         }
     }
+    $("#tbSheet").show();
 }
 
 /******************************************************************
@@ -122,6 +123,7 @@ function AddCustomCss() {
 
     $('html > head').append(styleTag);
     // 表单居中
+    $("#tbSheet").hide();
     $("#tbSheet").css('margin-left', '-71px');
     $("#page").css('display', 'flex');
     $("#page").css('width', '100%');
