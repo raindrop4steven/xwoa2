@@ -1,3 +1,7 @@
+/*******************************************************************
+ * 住建局公文流转表单
+ ******************************************************************/
+
 function onSheetLoad() {
     // 样式先载入
     AddCustomCss();
@@ -44,7 +48,7 @@ function main() {
         RenderCustomButton(MessageID);
 
         if(nid === 'NODE0001'){
-            options = [
+            var options = [
                 {'content': '中共无锡市委'},
                 {'content': '中共无锡市委办公室'},
                 {'content': '无锡市人民政府'},
@@ -63,6 +67,27 @@ function main() {
             ]
             // 定制显示来文单位
             ShowUnitList("unit", "165px", "200px", "362px", "72px", "483px", options, '#C-4-8', '#C-4-4', null);
+
+            var DocumentNoOptions = [
+                {'content': '中央来文'},
+                {'content': '国务院来文'},
+                {'content': '中办国办来文'},
+                {'content': '国家级其他来文'},
+                {'content': '省委来文'},
+                {'content': '省政府来文'},
+                {'content': '省两办来文'},
+                {'content': '省其他来文'},
+                {'content': '市委来文'},
+                {'content': '市政府来文'},
+                {'content': '市两办来文'},
+                {'content': '市其他来文'},
+                {'content': '区级请示来文'},
+                {'content': '区级其他来文'},
+                {'content': '领导批示'},
+                {'content': '同级来文'}
+            ]
+            // 定制显示来文单位
+            ShowUnitList("receiveNo", "672px", "269px", "161px", "72px", "178px", DocumentNoOptions, '#C-5-9', '#C-5-8', null);
         }
     }
 }
