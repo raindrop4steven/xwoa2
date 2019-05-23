@@ -151,7 +151,10 @@ function onSheetLoad() {
         });
     }
         
-    addSubWorkflowButton();
+    // 判断节点
+	if (nid == 'NODE0005'){
+		addSubWorkflowButton();
+	}
 };
 function onSheetCheck() {
         var nodeId = getQueryString("nid");

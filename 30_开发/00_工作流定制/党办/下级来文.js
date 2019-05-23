@@ -162,7 +162,10 @@ function onSheetLoad() {
 		});
 	}
 
-	addSubWorkflowButton();
+	// 判断节点
+	if (nid == 'NODE0006'){
+		addSubWorkflowButton();
+	}
 };
 
 
