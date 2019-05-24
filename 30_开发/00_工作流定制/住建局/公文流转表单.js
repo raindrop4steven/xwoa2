@@ -46,6 +46,8 @@ function main() {
         // });
         // 初始化自定义按钮
         RenderCustomButton(MessageID);
+        // 显示原流程按钮
+        ShowOriginWorkflow(MessageID);
 
         if(nid === 'NODE0001'){
             var options = [

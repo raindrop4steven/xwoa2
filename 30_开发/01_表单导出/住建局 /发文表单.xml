@@ -173,6 +173,58 @@
     <SubflowConfig></SubflowConfig>
     <NeedSign>0</NeedSign>
   </Nodes>
+  <Nodes>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0007</NodeKey>
+    <NodeName>传阅申请人</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>5</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>sameto:0d55bf97-b605-41e0-aed2-cd13fb77c48d,NODE0001</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2019/5/24 9:12:57</InTime>
+    <OutTime>2019/5/24 9:12:57</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>1</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0008</NodeKey>
+    <NodeName>添加拟办节点</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>5</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>sameto:0d55bf97-b605-41e0-aed2-cd13fb77c48d,NODE0002</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2019/5/24 9:13:17</InTime>
+    <OutTime>2019/5/24 9:13:17</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>1</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
   <NodeLayout>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
     <NodeKey>NODE0001</NodeKey>
@@ -200,7 +252,7 @@
   <NodeLayout>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
     <NodeKey>NODE0005</NodeKey>
-    <X>460</X>
+    <X>480</X>
     <Y>180</Y>
   </NodeLayout>
   <NodeLayout>
@@ -208,6 +260,18 @@
     <NodeKey>NODE0006</NodeKey>
     <X>580</X>
     <Y>180</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0007</NodeKey>
+    <X>400</X>
+    <Y>280</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0008</NodeKey>
+    <X>580</X>
+    <Y>280</Y>
   </NodeLayout>
   <NodeField>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
@@ -403,6 +467,28 @@
     <NodePathType>0</NodePathType>
     <NodePathStatus>0</NodePathStatus>
     <NodePathFinishTime>2019/5/9 18:40:29</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <TargetNodeKey>NODE0007</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2019/5/24 9:12:57</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <TargetNodeKey>NODE0008</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2019/5/24 9:13:17</NodePathFinishTime>
     <NodePathTarget></NodePathTarget>
     <NodePathName></NodePathName>
     <NodePathCondition></NodePathCondition>
