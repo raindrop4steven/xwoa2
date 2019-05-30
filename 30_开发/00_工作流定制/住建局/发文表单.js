@@ -59,7 +59,7 @@ function main() {
                 {'content': '无锡市太湖水污染防治办公室'}
             ]
             // 定制显示来文单位
-            ShowUnitList("unit", "718px", "231px", "345px", "54px", "55px", options, '#C-5-9', '#C-5-9', null);
+            ShowUnitList("unit", "636px", "231px", "323px", "54px", "55px", options, '#C-5-9', '#C-5-9', null);
         }
     }
     $("#tbSheet").show();
@@ -91,6 +91,7 @@ function loadScripts(array,callback){
 // 通用样式修改
 function AddCustomCss() {
     // 修复弹出框被文件选择框挡住的问题
+    // .DropDown ul {font-size:12px;}
     var styleTag = $('<style>.DropDown { z-index: 999; } .my-niban-opinion a, .my-opinion a {display:inline-block; margin-right: 10px;border: 1px solid #337ab7;font-size: 13px;padding: 3px 5px;margin-bottom: 10px;margin-left:15px;} .my-niban-opinion textarea, .my-opinion textarea { margin-top: 3px;margin-left: 15px;} #receiveNo > ul > li:hover,div#unit > ul > li:hover {background: rgb(207,229,239);}</style>')
 
     $('html > head').append(styleTag);

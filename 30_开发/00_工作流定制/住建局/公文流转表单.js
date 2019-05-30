@@ -51,42 +51,37 @@ function main() {
 
         if(nid === 'NODE0001'){
             var options = [
-                {'content': '中共无锡市委'},
-                {'content': '中共无锡市委办公室'},
-                {'content': '无锡市人民政府'},
-                {'content': '无锡市人民政府办公室'},
-                {'content': '中共江苏省委'},
-                {'content': '中共江苏省委办公厅'},
-                {'content': '江苏省人民政府'},
-                {'content': '江苏省人民政府办公厅'},
-                {'content': '中共中央国务院'},
-                {'content': '江苏省物价局 江苏调查总队'},
-                {'content': '无锡市河长制工作办公室'},
-                {'content': '无锡市太湖蓝藻打捞工作协调小组办公室'},
-                {'content': '省大气污染防治联席会议办公室'},
-                {'content': '无锡市环境保护委员会办公室'},
-                {'content': '无锡市太湖水污染防治办公室'}
+                {'content': '新吴区党政办'},
+                {'content': '无锡市住建局'},
+                {'content': '省政府'},
+                {'content': '市委市政府'},
+                {'content': '新吴区住建局'},
+                {'content': '无锡市人民办'},
+                {'content': '江苏省人防办'},
+                {'content': '新吴区扫黑除恶专项斗争领导小组'},
+                {'content': '高新区（新吴区）打好污染防治攻坚战指挥部办公室'},
+                {'content': '无锡市交通运输局'},
+                {'content': '无锡市交通运输管理处'},
+                {'content': '新区发展建设集团'},
+                {'content': '其他'}
             ]
             // 定制显示来文单位
             ShowUnitList("unit", "165px", "200px", "362px", "72px", "483px", options, '#C-4-8', '#C-4-4', null);
 
             var DocumentNoOptions = [
-                {'content': '中央来文'},
-                {'content': '国务院来文'},
-                {'content': '中办国办来文'},
-                {'content': '国家级其他来文'},
-                {'content': '省委来文'},
-                {'content': '省政府来文'},
-                {'content': '省两办来文'},
-                {'content': '省其他来文'},
-                {'content': '市委来文'},
-                {'content': '市政府来文'},
-                {'content': '市两办来文'},
-                {'content': '市其他来文'},
-                {'content': '区级请示来文'},
-                {'content': '区级其他来文'},
-                {'content': '领导批示'},
-                {'content': '同级来文'}
+                {'content': '锡建质安'},
+                {'content': '锡建房管'},
+                {'content': '锡新办发'},
+                {'content': '锡新政办发'},
+                {'content': '锡新污防攻坚办'},
+                {'content': '锡防发'},
+                {'content': '苏防'},
+                {'content': '锡建发'},
+                {'content': '锡新专会纪'},
+                {'content': '锡新扫黑办'},
+                {'content': '锡新政发'},
+                {'content': '锡交发'},
+                {'content': '锡交运管发'}
             ]
             // 定制显示来文单位
             ShowUnitList("receiveNo", "672px", "269px", "161px", "72px", "178px", DocumentNoOptions, '#C-5-9', '#C-5-8', null);
