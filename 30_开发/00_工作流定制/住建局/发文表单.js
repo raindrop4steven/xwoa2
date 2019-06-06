@@ -37,6 +37,8 @@ function main() {
         // 覆盖默认保存草稿操作
         onSaveDraft();
 
+        // 正文编辑按钮
+        addEditDocButton(worksheet_id);
         // 个人意见修改
         GetOpinionConfig(MessageID, nid);
 
@@ -102,4 +104,86 @@ function AddCustomCss() {
     $("#page").css('width', '100%');
     $("#page").css('height', '100%');
     $("#page").css('justify-content', 'center');
+}
+
+
+
+// TODO：放到sdk.js中去
+function addEditDocButton(worksheet_id) {
+    // 自定义顶部按钮
+    var title_bar = $('#titlebar > ul', top.document);
+
+    // 创建已阅按钮
+    var edit_li = document.createElement('LI');
+    var edit_button = document.createElement('BUTTON');
+    edit_button.setAttribute("id", "btn-custom-read");
+    edit_button.onclick = function () {
+        GetCellAttachment(worksheet_id, 9, 4, WindowsOpenDoc);
+    };
+    var i = document.createElement('I');
+    i.className = 'fa fa-edit';
+    i.textContent = ' 正文编辑';
+    edit_button.appendChild(i);
+    edit_li.appendChild(edit_button);
+
+    title_bar.prepend(edit_li);
+}
+
+/*
+ * 获取公文指定位置的附件列表
+ */
+function GetCellAttachment(sid, row, col, callback) {
+    $.ajax({
+        url: '/Apps/DEP/Common/CellAttachment?sid=' + sid + '&row=' + row + '&col=' + col,
+        type: 'GET',
+        success: function(data) {
+            console.log(data)
+            if (data.Succeed) {
+                attachment_list = data.Data.attachments;
+                if (attachment_list.length == 1) {
+                    var session = getCookie('APPKIZTICKET');
+                    var origin = location.origin;
+                    var attachment = attachment_list[0];
+                    callback && callback(origin, session, attachment, row, col);
+                } else {
+                    alert('附件个数不为1，无法正文编辑');
+                }
+            }
+            else
+            {
+                console.log(data.Message)
+            }
+        },
+        error: function(error) {
+            console.log(error)
+        }
+    })
+}
+
+function WindowsOpenDoc(origin, session, attachment, row, col) {
+    $.ajax({
+        url: 'http://127.0.0.1:5000/openDoc',
+        type: 'POST',
+        data: {
+            'origin': origin,
+            'session': session,
+            'att_id': attachment.AttID,
+            'extension': attachment.AttExtension,
+            'row': row,
+            'col': col
+        },
+        success: function(data) {
+            console.log(data)
+        },
+        error:function(error){
+            console.log(error);
+        }
+    })
+}
+/*
+ * 工具类
+ */
+function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    if (match) return match[2];
 }

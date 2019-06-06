@@ -1,0 +1,627 @@
+<Template>
+  <Messages>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <MessageTitle>公文流转表单</MessageTitle>
+    <MessageCreateTime>2019/5/23 14:27:46</MessageCreateTime>
+    <MessageFinishTime>2019/4/11 9:44:09</MessageFinishTime>
+    <MessageTimeLimit></MessageTimeLimit>
+    <MessageFinishTimeExpected>2999/12/31 0:00:00</MessageFinishTimeExpected>
+    <MessageIssuedBy>100001</MessageIssuedBy>
+    <MessageNote></MessageNote>
+    <InitNodeKey>NODE0001</InitNodeKey>
+    <MessageStatus>0</MessageStatus>
+    <IsTemplate>1</IsTemplate>
+    <MessageType>file</MessageType>
+    <MessageTypeKey>公文流转表单</MessageTypeKey>
+    <MessageHelper></MessageHelper>
+    <FromTemplate></FromTemplate>
+    <DataSourceID></DataSourceID>
+  </Messages>
+  <Nodes>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <NodeName>文电科签收</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>1</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>appl</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/4/18 15:13:16</InTime>
+    <OutTime>2018/4/18 15:13:16</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <NodeName>拟办</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>2</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>pos:,01c01034-9cbc-4ae5-8cee-114d36a0bd3e,</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/4/18 15:13:41</InTime>
+    <OutTime>2018/4/18 15:13:41</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendbackConfig":{"SendbackThenJumpThis":0,"SendbackCondition":"","SendbackHideSendByCondition":0,"SendbackWhenNoSendTarget":0},"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0003</NodeKey>
+    <NodeName>文电科转发</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>2</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>appl</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/4/18 15:14:08</InTime>
+    <OutTime>2018/4/18 15:14:08</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>2</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0004</NodeKey>
+    <NodeName>领导批示</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>2</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>dynamic</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/4/18 15:14:42</InTime>
+    <OutTime>2018/4/18 15:14:42</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>1</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <NodeName>科室承办</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>2</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>dynamic</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/4/18 15:16:15</InTime>
+    <OutTime>2018/4/18 15:16:15</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>1</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendbackConfig":{"SendbackThenJumpThis":0,"SendbackCondition":"","SendbackHideSendByCondition":0,"SendbackWhenNoSendTarget":0},"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0007</NodeKey>
+    <NodeName>结束</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>4</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress></HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/5/10 15:06:29</InTime>
+    <OutTime>2018/5/10 15:06:29</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <Nodes>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0009</NodeKey>
+    <NodeName>文电科归档</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>2</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>appl</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2018/7/14 10:04:11</InTime>
+    <OutTime>2018/7/14 10:04:11</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>0</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
+  <NodeLayout>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <X>80</X>
+    <Y>180</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <X>180</X>
+    <Y>180</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0003</NodeKey>
+    <X>280</X>
+    <Y>180</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0004</NodeKey>
+    <X>380</X>
+    <Y>80</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <X>180</X>
+    <Y>80</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0007</NodeKey>
+    <X>480</X>
+    <Y>180</Y>
+  </NodeLayout>
+  <NodeLayout>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0009</NodeKey>
+    <X>380</X>
+    <Y>180</Y>
+  </NodeLayout>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0004</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>D11</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>D13</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>D15</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>D4</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>D5</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>D6</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>D7</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>D8</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>D9</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>E10</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0004</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>E12</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>E14</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>H10</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>H4</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>H5</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>H6</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <FieldKey>I5</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeAction>
+    <NodeActionID>24567</NodeActionID>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <NodeActionName>映射表数据</NodeActionName>
+    <NodeActionNo>0</NodeActionNo>
+    <NodeActionOccur>3</NodeActionOccur>
+    <NodeActionCommand>execurl:/Apps/DEP/Workflow/MappingData</NodeActionCommand>
+    <NodeActionCommandRoleback></NodeActionCommandRoleback>
+    <NodeActionResult>0</NodeActionResult>
+    <NodeActionResultRoleback>0</NodeActionResultRoleback>
+    <CreateTime>2019/4/30 13:02:24</CreateTime>
+  </NodeAction>
+  <NodeAction>
+    <NodeActionID>25714</NodeActionID>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <NodeActionName>映射预警数据</NodeActionName>
+    <NodeActionNo>0</NodeActionNo>
+    <NodeActionOccur>3</NodeActionOccur>
+    <NodeActionCommand>execurl:/Apps/DEP/Workflow/MappingAlarm</NodeActionCommand>
+    <NodeActionCommandRoleback></NodeActionCommandRoleback>
+    <NodeActionResult>0</NodeActionResult>
+    <NodeActionResultRoleback>0</NodeActionResultRoleback>
+    <CreateTime>2019/5/23 15:03:55</CreateTime>
+  </NodeAction>
+  <NodePath>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0001</NodeKey>
+    <TargetNodeKey>NODE0002</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/4/18 15:13:41</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <TargetNodeKey>NODE0003</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/4/18 15:14:08</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0003</NodeKey>
+    <TargetNodeKey>NODE0004</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/4/18 15:14:42</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0003</NodeKey>
+    <TargetNodeKey>NODE0005</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/4/18 15:16:15</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0003</NodeKey>
+    <TargetNodeKey>NODE0009</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/7/14 10:04:11</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0004</NodeKey>
+    <TargetNodeKey>NODE0003</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/4/18 15:15:08</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0005</NodeKey>
+    <TargetNodeKey>NODE0003</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/7/10 11:14:12</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <NodeKey>NODE0009</NodeKey>
+    <TargetNodeKey>NODE0007</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2018/7/14 10:05:16</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition></NodePathCondition>
+  </NodePath>
+  <Doc>
+    <DocID>20baeb14-0091-4095-886f-65a3a776938b</DocID>
+    <MessageID>735d333f-d695-4199-9b42-bc65e8ee6a33</MessageID>
+    <DocName>公文流转表单</DocName>
+    <DocType>spreadsheet</DocType>
+    <DocDescr></DocDescr>
+    <DocHelperID>19a4ef4c-2ae5-4fdd-b142-57e318bcc562</DocHelperID>
+    <DocContent></DocContent>
+  </Doc>
+  <Worksheets>
+    <WorksheetID>19a4ef4c-2ae5-4fdd-b142-57e318bcc562</WorksheetID>
+    <WorksheetName>公文流转表单</WorksheetName>
+    <WorkbookID>0</WorkbookID>
+    <CheckOut></CheckOut>
+    <CreateTime>2019/4/11 9:44:09</CreateTime>
+    <UpdateTime>2019/6/1 9:48:05</UpdateTime>
+    <RowHeight>2,58;3,23;4,71;5,71;6,74;7,71;8,76;9,240;10,52;11,216;12,66;13,209;14,54;15,65</RowHeight>
+    <ColWidth>1,44;2,46;3,55;4,180;5,181;6,58;7,90;8,155;9,124</ColWidth>
+    <Document>&lt;Table&gt;&lt;Row Index="2" Size="58" /&gt;&lt;Row Index="3" Size="23" /&gt;&lt;Row Index="4" Size="71" /&gt;&lt;Row Index="5" Size="71" /&gt;&lt;Row Index="6" Size="74" /&gt;&lt;Row Index="7" Size="71" /&gt;&lt;Row Index="8" Size="76" /&gt;&lt;Row Index="9" Size="240" /&gt;&lt;Row Index="10" Size="52" /&gt;&lt;Row Index="11" Size="216" /&gt;&lt;Row Index="12" Size="66" /&gt;&lt;Row Index="13" Size="209" /&gt;&lt;Row Index="14" Size="54" /&gt;&lt;Row Index="15" Size="65" /&gt;&lt;Column Index="1" Size="44" /&gt;&lt;Column Index="2" Size="46" /&gt;&lt;Column Index="3" Size="55" /&gt;&lt;Column Index="4" Size="180" /&gt;&lt;Column Index="5" Size="181" /&gt;&lt;Column Index="6" Size="58" /&gt;&lt;Column Index="7" Size="90" /&gt;&lt;Column Index="8" Size="155" /&gt;&lt;Column Index="9" Size="124" /&gt;&lt;CellEvent Row="12" Col="5" EventOn="OnUpdate" EventCommand="javascript:opinionChanged('#C-12-5');" /&gt;&lt;CellEvent Row="12" Col="5" EventOn="OnDblClick" EventCommand="" /&gt;&lt;CellEvent Row="14" Col="5" EventOn="OnUpdate" EventCommand="javascript:opinionChanged('#C-14-5');" /&gt;&lt;CellEvent Row="14" Col="5" EventOn="OnDblClick" EventCommand="" /&gt;&lt;Cell Col="2" Row="1" FontName="华文仿宋" /&gt;&lt;Cell Col="2" Row="2" MergeToCol="9" FontName="方正小标宋简体" FontSize="24" FontBold="-1" Align="2" Value="住建局公文处理单" /&gt;&lt;Cell Col="2" Row="4" MergeToCol="3" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="来文单位" /&gt;&lt;Cell Col="4" Row="4" MergeToCol="5" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" /&gt;&lt;Cell Col="2" Row="5" MergeToCol="3" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="来文文号" /&gt;&lt;Cell Col="2" Row="8" MergeToCol="3" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="正文" /&gt;&lt;Cell Col="4" Row="8" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="undefined" DataSource="10" /&gt;&lt;Cell Col="2" Row="9" MergeToCol="3" MergeToRow="10" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="文电负责&amp;#xA;人拟办" /&gt;&lt;Cell Col="4" Row="9" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="undefined" /&gt;&lt;Cell Col="4" Row="10" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="签办人" /&gt;&lt;Cell Col="2" Row="11" MergeToCol="3" MergeToRow="12" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="领导批示" /&gt;&lt;Cell Col="4" Row="11" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderRightWidth="1" KeepHistory="true" Align="undefined" /&gt;&lt;Cell Col="2" Row="3" MergeToCol="3" FontName="华文仿宋" FontSize="16" Align="3" /&gt;&lt;Cell Col="4" Row="3" MergeToCol="5" FontName="华文仿宋" FontSize="16" /&gt;&lt;Cell Col="6" Row="3" FontName="华文仿宋" FontSize="16" Align="3" /&gt;&lt;Cell Col="7" Row="3" MergeToCol="8" FontName="华文仿宋" FontSize="16" /&gt;&lt;Cell Col="2" Row="7" MergeToCol="3" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="文件标题" /&gt;&lt;Cell Col="2" Row="13" MergeToCol="3" MergeToRow="14" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="科室承办" /&gt;&lt;Cell Col="4" Row="13" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" KeepHistory="true" Align="undefined" /&gt;&lt;Cell Col="3" Row="1" FontName="华文仿宋" /&gt;&lt;Cell Col="4" Row="1" FontName="华文仿宋" /&gt;&lt;Cell Col="5" Row="1" FontName="华文仿宋" /&gt;&lt;Cell Col="6" Row="1" FontName="华文仿宋" /&gt;&lt;Cell Col="7" Row="1" FontName="华文仿宋" /&gt;&lt;Cell Col="8" Row="1" FontName="华文仿宋" /&gt;&lt;Cell Col="9" Row="3" FontSize="16" /&gt;&lt;Cell Col="5" Row="10" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" DataSource="102" /&gt;&lt;Cell Col="8" Row="10" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" DSValues="yyyy-mm-dd hh:ii,@" Align="2" DataSource="3" /&gt;&lt;Cell Col="6" Row="4" MergeToCol="7" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="来文日期" /&gt;&lt;Cell Col="6" Row="5" MergeToCol="7" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="收文文号" /&gt;&lt;Cell Col="6" Row="10" MergeToCol="7" FontName="方正小标宋简体" FontSize="16" Align="2" Value="签办时间" /&gt;&lt;Cell Col="8" Row="4" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" DSValues="yyyy-mm-dd,@" Align="2" DataSource="3" /&gt;&lt;Cell Col="4" Row="5" MergeToCol="5" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" /&gt;&lt;Cell Col="8" Row="5" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" /&gt;&lt;Cell Col="9" Row="5" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" /&gt;&lt;Cell Col="6" Row="12" MergeToCol="7" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="个人意见模板" /&gt;&lt;Cell Col="8" Row="12" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderBottomWidth="1" BorderRightWidth="1" InternalValue="0" /&gt;&lt;Cell Col="4" Row="12" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="常用意见模板" /&gt;&lt;Cell Col="5" Row="12" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" DSValues="公共模板意见|Content|Content|Content" Align="2" DataSource="2" /&gt;&lt;Cell Col="4" Row="14" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="常用意见模板" /&gt;&lt;Cell Col="6" Row="14" MergeToCol="7" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="个人意见模板" /&gt;&lt;Cell Col="8" Row="14" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" /&gt;&lt;Cell Col="5" Row="14" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" DSValues="公共模板意见|Content|Content|Content" DataSource="2" /&gt;&lt;Cell Col="2" Row="15" MergeToCol="3" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="承办意见&amp;#xA;附件" /&gt;&lt;Cell Col="4" Row="15" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="undefined" DataSource="10" /&gt;&lt;Cell Col="4" Row="7" MergeToCol="9" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" /&gt;&lt;Cell Col="2" Row="6" MergeToCol="3" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" Align="2" Value="是否紧急" /&gt;&lt;Cell Col="4" Row="6" MergeToCol="5" FontName="仿宋_GB2312" FontSize="14" BorderTopWidth="1" BorderLeftWidth="1" BorderBottomWidth="1" BorderRightWidth="1" DSValues="yyyy-mm-dd" Align="2" DataSource="3" /&gt;&lt;Cell Col="6" Row="6" MergeToCol="7" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="归档类目" /&gt;&lt;Cell Col="8" Row="6" MergeToCol="9" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="14" FontName="仿宋_GB2312" DSValues="省政府&amp;#xA;市委市政府&amp;#xA;市局文件&amp;#xA;区局文件&amp;#xA;内部发文&amp;#xA;其他" Align="2" DataSource="1" /&gt;&lt;/Table&gt;</Document>
+    <DataStorage>&lt;Data&gt;&lt;DataSource Name="来文文号" Connstr="localhost" Sql="SELECT [ID],[Name] FROM [收文序列]&amp;#xD;&amp;#xA;where ParentID = '$$_D5.Value_$$'" /&gt;&lt;DataSource Name="来文文号ID" Connstr="localhost" Sql="SELECT [Name] FROM [收文序列]&amp;#xD;&amp;#xA;where ParentID = '$$_H5.Value_$$'" /&gt;&lt;DataSource Name="收文序列" Connstr="localhost" Sql="SELECT [ID],[Name] FROM [收文序列]&amp;#xD;&amp;#xA;where ParentID = '0'" /&gt;&lt;DataSource Name="收文表" Connstr="localhost" Sql="SELECT * FROM [GW_ReceiveFile]" /&gt;&lt;DataSource Name="公共模板意见" Connstr="137数据库" Sql="SELECT ID, Content FROM TGR_PublicOpinion;" /&gt;&lt;/Data&gt;</DataStorage>
+    <Script>/*******************************************************************
+ * 住建局公文流转表单
+ ******************************************************************/
+
+function onSheetLoad() {
+    // 样式先载入
+    AddCustomCss();
+
+    // 功能定制跟进
+    loadScripts(["/Apps/DEP/Content/sdk/sdk.js"], function(){
+        main();
+    });
+};
+
+function onSheetCheck() {
+};
+
+function onAnyCellUpdate() {
+};
+
+// 每个表单的定制入口
+function main() {
+    /*
+     * 参数获取
+     */
+    // 获取节点ID
+    var nid = getQueryString("nid");
+    //当没有节点Id 所以处于只读状态 初始化按钮
+    var MessageID = getQueryString("mid");
+    // 领导的节点，自定义按钮
+    var isWkfRunnign = IsWkfRunning();
+
+    if(isWkfRunnign){
+        /*
+         * 动作改造
+         */
+        // 覆盖默认保存草稿操作
+        onSaveDraft();
+        // 个人意见修改
+        GetOpinionConfig(MessageID, nid);
+        // 初始化修改意见
+        // initChangeOpinionCell(MessageID, function(mid, nid, type){
+        //     console.log(mid);
+        //     console.log(nid);
+        //     console.log(type);
+        // });
+        // 初始化自定义按钮
+        RenderCustomButton(MessageID);
+        // 显示原流程按钮
+        ShowOriginWorkflow(MessageID);
+
+        if(nid === 'NODE0001'){
+            var options = [
+                {'content': '新吴区党政办'},
+                {'content': '无锡市住建局'},
+                {'content': '省政府'},
+                {'content': '市委市政府'},
+                {'content': '新吴区住建局'},
+                {'content': '无锡市人民办'},
+                {'content': '江苏省人防办'},
+                {'content': '新吴区扫黑除恶专项斗争领导小组'},
+                {'content': '高新区（新吴区）打好污染防治攻坚战指挥部办公室'},
+                {'content': '无锡市交通运输局'},
+                {'content': '无锡市交通运输管理处'},
+                {'content': '新区发展建设集团'},
+                {'content': '其他'}
+            ]
+            // 定制显示来文单位
+            ShowUnitList("unit", "165px", "200px", "362px", "72px", "483px", options, '#C-4-8', '#C-4-4', null);
+
+            var DocumentNoOptions = [
+                {'content': '锡建质安'},
+                {'content': '锡建房管'},
+                {'content': '锡新办发'},
+                {'content': '锡新政办发'},
+                {'content': '锡新污防攻坚办'},
+                {'content': '锡防发'},
+                {'content': '苏防'},
+                {'content': '锡建发'},
+                {'content': '锡新专会纪'},
+                {'content': '锡新扫黑办'},
+                {'content': '锡新政发'},
+                {'content': '锡交发'},
+                {'content': '锡交运管发'}
+            ]
+            // 定制显示来文单位
+            ShowUnitList("receiveNo", "672px", "269px", "161px", "72px", "178px", DocumentNoOptions, '#C-5-9', '#C-5-8', null);
+        }
+    }
+    $("#tbSheet").show();
+}
+
+/******************************************************************
+ * 工具方法 【必须】
+ * ****************************************************************/
+function loadScripts(array,callback){
+    var loader = function(src,handler){
+        var script = document.createElement("script");
+        script.src = src;
+        script.onload = script.onreadystatechange = function(){
+            script.onreadystatechange = script.onload = null;
+            handler();
+        }
+        var head = document.getElementsByTagName("head")[0];
+        (head || document.body).appendChild( script );
+    };
+    (function run(){
+        if(array.length!=0){
+            loader(array.shift(), run);
+        }else{
+            callback &amp;&amp; callback();
+        }
+    })();
+}
+
+// 通用样式修改
+function AddCustomCss() {
+    // 修复弹出框被文件选择框挡住的问题
+    var styleTag = $('&lt;style&gt;.DropDown { z-index: 999; } .my-niban-opinion a, .my-opinion a {display:inline-block; margin-right: 10px;border: 1px solid #337ab7;font-size: 13px;padding: 3px 5px;margin-bottom: 10px;margin-left:15px;} .my-niban-opinion textarea, .my-opinion textarea { margin-top: 3px;margin-left: 15px;} #receiveNo &gt; ul &gt; li:hover,div#unit &gt; ul &gt; li:hover {background: rgb(207,229,239);}&lt;/style&gt;')
+
+    $('html &gt; head').append(styleTag);
+    // 表单居中
+    $("#tbSheet").hide();
+    $("#tbSheet").css('margin-left', '-71px');
+    $("#page").css('display', 'flex');
+    $("#page").css('width', '100%');
+    $("#page").css('height', '100%');
+    $("#page").css('justify-content', 'center');
+}</Script>
+  </Worksheets>
+</Template>
