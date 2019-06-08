@@ -180,6 +180,7 @@ function WindowsOpenDoc(origin, session, attachment, row, col) {
         },
         error:function(error){
             console.log(error);
+            alert('请确认本地文档编辑服务已打开')
         }
     })
 }

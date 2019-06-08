@@ -18,6 +18,12 @@ pool = Pool()
 
 future_dict = {}
 
+@app.route('/')
+def index():
+    return jsonify({
+        "status": "running..."
+    })
+
 @app.route('/openDoc', methods=['POST'])
 def openDoc():
     # Parse arguments
@@ -31,8 +37,7 @@ def openDoc():
     # download file
     file_path = download_file(origin, session, att_id, extension)
 
-    # f = pool.submit(subprocess.call, r'C:\Users\solar\AppData\Local\Kingsoft\WPS Office\10.1.0.7698\office6\wps.exe %s' % file_path)
-    f = pool.submit(subprocess.call, r'start /wait %s' % file_path, shell=True)
+    f = pool.submit(subprocess.call, r'start /wait %s' % file_path, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE)
     f.add_done_callback(callback)
     future_dict[f] = {
         'att_id': att_id,
@@ -73,6 +78,7 @@ def download_file(origin, session, att_id, extension):
 def callback(future):
     if future.exception() is not None:
         print('got exception: %s' % future.exception())
+        pass
     else:
         process_dict = future_dict.get(future)
         print('process returned %d' % future.result())
