@@ -37,8 +37,6 @@ function main() {
         // 覆盖默认保存草稿操作
         onSaveDraft();
 
-        // 正文编辑按钮
-        addEditDocButton(worksheet_id);
         // 个人意见修改
         GetOpinionConfig(MessageID, nid);
 
@@ -62,6 +60,11 @@ function main() {
             ]
             // 定制显示来文单位
             ShowUnitList("unit", "636px", "231px", "323px", "54px", "55px", options, '#C-5-9', '#C-5-9', null);
+        }
+
+        if (nid === 'NODE0005') {
+            // 正文编辑按钮
+            addEditDocButton(worksheet_id);
         }
     }
     $("#tbSheet").show();
