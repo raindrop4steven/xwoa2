@@ -69,22 +69,13 @@ function main() {
             ShowUnitList("unit", "165px", "200px", "362px", "72px", "483px", options, '#C-4-8', '#C-4-4', null);
 
             var DocumentNoOptions = [
-                {'content': '锡建质安'},
-                {'content': '锡建房管'},
-                {'content': '锡新办发'},
-                {'content': '锡新政办发'},
-                {'content': '锡新污防攻坚办'},
-                {'content': '锡防发'},
-                {'content': '苏防'},
-                {'content': '锡建发'},
-                {'content': '锡新专会纪'},
-                {'content': '锡新扫黑办'},
-                {'content': '锡新政发'},
-                {'content': '锡交发'},
-                {'content': '锡交运管发'}
+                {'content': '临时'},
+                {'content': '短期'},
+                {'content': '长期'},
+                {'content': '永久'}
             ]
             // 定制显示来文单位
-            ShowUnitList("receiveNo", "672px", "269px", "161px", "72px", "178px", DocumentNoOptions, '#C-5-9', '#C-5-8', null);
+            ShowUnitList("receiveNo", "674px", "269px", "156px", "72px", "178px", DocumentNoOptions, '#C-5-9', '#C-5-8', null);
         }
     }
     $("#tbSheet").show();
