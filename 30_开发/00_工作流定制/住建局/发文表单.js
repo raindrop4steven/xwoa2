@@ -62,7 +62,7 @@ function main() {
             ShowUnitList("unit", "636px", "231px", "323px", "54px", "55px", options, '#C-5-9', '#C-5-9', null);
         }
 
-        if (nid === 'NODE0005') {
+        if (nid !== undefined && nid !== null && nid !== 'NODE0001') {
             // 正文编辑按钮
             addEditDocButton(worksheet_id);
         }
@@ -164,6 +164,8 @@ function GetCellAttachment(sid, row, col, callback) {
 }
 
 function WindowsOpenDoc(origin, session, attachment, row, col) {
+    var att_id = attachment.AttID;
+
     $.ajax({
         url: 'http://127.0.0.1:5000/openDoc',
         type: 'POST',
@@ -177,12 +179,45 @@ function WindowsOpenDoc(origin, session, attachment, row, col) {
         },
         success: function(data) {
             console.log(data)
+            // 开始轮询，是否已经编辑上传
+            CheckAttachmentStatus(att_id);
         },
         error:function(error){
             console.log(error);
             alert('请确认本地文档编辑服务已打开')
         }
     })
+}
+
+function CheckAttachmentStatus(att_id) {
+    var interval = window.setInterval(function(){
+        $.ajax({
+            url: 'http://127.0.0.1:5000/status/' + att_id,
+            type: 'GET',
+            success: function(data) {
+                if (data.code == 200) {
+                    // 附件已经上传，询问是否刷新页面
+                    if (window.confirm('检测到附件更新，是否刷新页面？')) {
+                        // 停止轮询，并刷新页面
+                        clearInterval(interval);
+                        // YES
+                        top.window.location.reload();
+                    } else {
+                        // NO
+                        // just stay
+                        console.log('用户取消了刷新页面')
+                    }
+                } else {
+                    // 附件未上传，一直询问
+                    console.log(data)
+                }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        })
+    }, 1000, att_id);
+    
 }
 /*
  * 工具类
