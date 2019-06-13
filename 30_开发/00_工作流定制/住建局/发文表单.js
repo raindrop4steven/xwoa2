@@ -212,6 +212,10 @@ function CheckAttachmentStatus(att_id) {
                         // just stay
                         console.log('用户取消了刷新页面')
                     }
+                } else if (data.code == 203) {
+                    // 用户未更新文档，保持不动
+                    console.log(data)
+                    clearInterval(interval);
                 } else if (data.code == 400){
                     // 附件已经上传，询问是否刷新页面
                     if (window.confirm('提示：' + data.message)) {
