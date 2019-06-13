@@ -179,12 +179,17 @@ function WindowsOpenDoc(origin, session, attachment, row, col) {
         },
         success: function(data) {
             console.log(data)
-            // 开始轮询，是否已经编辑上传
-            CheckAttachmentStatus(att_id);
+            if (data.code == 200) {
+                // 开始轮询，是否已经编辑上传
+                CheckAttachmentStatus(att_id);
+            } else {
+                console.log(data)
+                alert(data.message)
+            }
         },
         error:function(error){
             console.log(error);
-            alert('请确认本地文档编辑服务已打开')
+            alert('请确认"公文编辑助手"已打开')
         }
     })
 }
@@ -205,6 +210,21 @@ function CheckAttachmentStatus(att_id) {
                     } else {
                         // NO
                         // just stay
+                        console.log('用户取消了刷新页面')
+                    }
+                } else if (data.code == 400){
+                    // 附件已经上传，询问是否刷新页面
+                    if (window.confirm('提示：' + data.message)) {
+                        // 停止轮询，并刷新页面
+                        clearInterval(interval);
+                        // YES
+                        top.window.location.reload();
+                    } else {
+                        // NO
+                        // 停止轮询，并刷新页面
+                        clearInterval(interval);
+                        // YES
+                        top.window.location.reload();
                         console.log('用户取消了刷新页面')
                     }
                 } else {
