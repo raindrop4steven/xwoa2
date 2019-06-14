@@ -62,7 +62,7 @@ function main() {
             ShowUnitList("unit", "636px", "231px", "323px", "54px", "55px", options, '#C-5-9', '#C-5-9', null);
         }
 
-        if (nid !== undefined && nid !== null && nid !== 'NODE0001') {
+        if (nid === 'NODE0002' || nid === 'NODE0005') {
             // 正文编辑按钮
             addEditDocButton(worksheet_id);
         }
