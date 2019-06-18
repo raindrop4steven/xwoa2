@@ -2,7 +2,7 @@
   <Messages>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
     <MessageTitle>发文表单</MessageTitle>
-    <MessageCreateTime>2019/5/23 16:34:33</MessageCreateTime>
+    <MessageCreateTime>2019/6/18 14:06:10</MessageCreateTime>
     <MessageFinishTime>2019/5/9 18:38:49</MessageFinishTime>
     <MessageTimeLimit></MessageTimeLimit>
     <MessageFinishTimeExpected>2019/5/9 18:38:49</MessageFinishTimeExpected>
@@ -202,7 +202,7 @@
   <Nodes>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
     <NodeKey>NODE0008</NodeKey>
-    <NodeName>添加拟办节点</NodeName>
+    <NodeName>传阅拟办节点</NodeName>
     <NodeStatus>0</NodeStatus>
     <NodeType>5</NodeType>
     <NodeDescr></NodeDescr>
@@ -225,10 +225,36 @@
     <SubflowConfig></SubflowConfig>
     <NeedSign>0</NeedSign>
   </Nodes>
+  <Nodes>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0009</NodeKey>
+    <NodeName>部门审核</NodeName>
+    <NodeStatus>0</NodeStatus>
+    <NodeType>2</NodeType>
+    <NodeDescr></NodeDescr>
+    <HandlerAddress>dynamic</HandlerAddress>
+    <HandlerID></HandlerID>
+    <InTime>2019/6/18 13:29:59</InTime>
+    <OutTime>2019/6/18 13:29:59</OutTime>
+    <TimeLimit></TimeLimit>
+    <OutTimeExpected>2999/12/31 0:00:00</OutTimeExpected>
+    <SendMode>0</SendMode>
+    <MultiHandleMode>0</MultiHandleMode>
+    <MultiProcessMode>1</MultiProcessMode>
+    <EntrustBy></EntrustBy>
+    <ExpireProcess></ExpireProcess>
+    <NodeCondition></NodeCondition>
+    <NodeComment></NodeComment>
+    <ReportToManager>0</ReportToManager>
+    <NodePass></NodePass>
+    <NodeOptions>{"SendSignConfig":{"AllowSendSign":"0"}}</NodeOptions>
+    <SubflowConfig></SubflowConfig>
+    <NeedSign>0</NeedSign>
+  </Nodes>
   <NodeLayout>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
     <NodeKey>NODE0001</NodeKey>
-    <X>180</X>
+    <X>80</X>
     <Y>180</Y>
   </NodeLayout>
   <NodeLayout>
@@ -264,7 +290,7 @@
   <NodeLayout>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
     <NodeKey>NODE0007</NodeKey>
-    <X>400</X>
+    <X>380</X>
     <Y>280</Y>
   </NodeLayout>
   <NodeLayout>
@@ -273,25 +299,38 @@
     <X>580</X>
     <Y>280</Y>
   </NodeLayout>
+  <NodeLayout>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0009</NodeKey>
+    <X>180</X>
+    <Y>180</Y>
+  </NodeLayout>
   <NodeField>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
-    <NodeKey>NODE0002</NodeKey>
+    <NodeKey>NODE0009</NodeKey>
     <DocID>bd5ec40d-2b29-4805-8975-440db67fcabc</DocID>
     <FieldKey>D10</FieldKey>
     <Control>2</Control>
   </NodeField>
   <NodeField>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
-    <NodeKey>NODE0003</NodeKey>
+    <NodeKey>NODE0002</NodeKey>
     <DocID>bd5ec40d-2b29-4805-8975-440db67fcabc</DocID>
     <FieldKey>D12</FieldKey>
     <Control>2</Control>
   </NodeField>
   <NodeField>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
-    <NodeKey>NODE0004</NodeKey>
+    <NodeKey>NODE0003</NodeKey>
     <DocID>bd5ec40d-2b29-4805-8975-440db67fcabc</DocID>
     <FieldKey>D14</FieldKey>
+    <Control>2</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0004</NodeKey>
+    <DocID>bd5ec40d-2b29-4805-8975-440db67fcabc</DocID>
+    <FieldKey>D16</FieldKey>
     <Control>2</Control>
   </NodeField>
   <NodeField>
@@ -338,23 +377,30 @@
   </NodeField>
   <NodeField>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
-    <NodeKey>NODE0002</NodeKey>
+    <NodeKey>NODE0009</NodeKey>
     <DocID>bd5ec40d-2b29-4805-8975-440db67fcabc</DocID>
     <FieldKey>F11</FieldKey>
     <Control>1</Control>
   </NodeField>
   <NodeField>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
-    <NodeKey>NODE0003</NodeKey>
+    <NodeKey>NODE0002</NodeKey>
     <DocID>bd5ec40d-2b29-4805-8975-440db67fcabc</DocID>
     <FieldKey>F13</FieldKey>
     <Control>1</Control>
   </NodeField>
   <NodeField>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
-    <NodeKey>NODE0004</NodeKey>
+    <NodeKey>NODE0003</NodeKey>
     <DocID>bd5ec40d-2b29-4805-8975-440db67fcabc</DocID>
     <FieldKey>F15</FieldKey>
+    <Control>1</Control>
+  </NodeField>
+  <NodeField>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0004</NodeKey>
+    <DocID>bd5ec40d-2b29-4805-8975-440db67fcabc</DocID>
+    <FieldKey>F17</FieldKey>
     <Control>1</Control>
   </NodeField>
   <NodeField>
@@ -387,13 +433,20 @@
   </NodeField>
   <NodeField>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
-    <NodeKey>NODE0002</NodeKey>
+    <NodeKey>NODE0009</NodeKey>
     <DocID>bd5ec40d-2b29-4805-8975-440db67fcabc</DocID>
     <FieldKey>J11</FieldKey>
     <Control>1</Control>
   </NodeField>
+  <NodeField>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0002</NodeKey>
+    <DocID>bd5ec40d-2b29-4805-8975-440db67fcabc</DocID>
+    <FieldKey>J13</FieldKey>
+    <Control>1</Control>
+  </NodeField>
   <NodeAction>
-    <NodeActionID>24566</NodeActionID>
+    <NodeActionID>27039</NodeActionID>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
     <NodeKey>NODE0001</NodeKey>
     <NodeActionName>映射表数据</NodeActionName>
@@ -408,10 +461,10 @@
   <NodePath>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
     <NodeKey>NODE0001</NodeKey>
-    <TargetNodeKey>NODE0002</TargetNodeKey>
+    <TargetNodeKey>NODE0009</TargetNodeKey>
     <NodePathType>0</NodePathType>
     <NodePathStatus>0</NodePathStatus>
-    <NodePathFinishTime>2019/5/9 18:39:24</NodePathFinishTime>
+    <NodePathFinishTime>2019/6/18 13:29:59</NodePathFinishTime>
     <NodePathTarget></NodePathTarget>
     <NodePathName></NodePathName>
     <NodePathCondition></NodePathCondition>
@@ -493,6 +546,28 @@
     <NodePathName></NodePathName>
     <NodePathCondition></NodePathCondition>
   </NodePath>
+  <NodePath>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0009</NodeKey>
+    <TargetNodeKey>NODE0001</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2019/6/18 13:35:11</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition>发文表单.D10='不同意'</NodePathCondition>
+  </NodePath>
+  <NodePath>
+    <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
+    <NodeKey>NODE0009</NodeKey>
+    <TargetNodeKey>NODE0002</TargetNodeKey>
+    <NodePathType>0</NodePathType>
+    <NodePathStatus>0</NodePathStatus>
+    <NodePathFinishTime>2019/6/18 13:30:03</NodePathFinishTime>
+    <NodePathTarget></NodePathTarget>
+    <NodePathName></NodePathName>
+    <NodePathCondition>发文表单.D10='同意'</NodePathCondition>
+  </NodePath>
   <Doc>
     <DocID>bd5ec40d-2b29-4805-8975-440db67fcabc</DocID>
     <MessageID>0d55bf97-b605-41e0-aed2-cd13fb77c48d</MessageID>
@@ -508,10 +583,10 @@
     <WorkbookID>0</WorkbookID>
     <CheckOut></CheckOut>
     <CreateTime>2019/5/9 18:40:58</CreateTime>
-    <UpdateTime>2019/5/20 14:39:16</UpdateTime>
-    <RowHeight>2,58;4,52;5,49;6,48;7,49;8,51;9,55;10,193;11,41;12,178;13,42;14,189;15,42</RowHeight>
-    <ColWidth>4,101;5,99;6,102;8,96;9,92;10,125;11,127</ColWidth>
-    <Document>&lt;Table&gt;&lt;Row Index="2" Size="58" /&gt;&lt;Row Index="4" Size="52" /&gt;&lt;Row Index="5" Size="49" /&gt;&lt;Row Index="6" Size="48" /&gt;&lt;Row Index="7" Size="49" /&gt;&lt;Row Index="8" Size="51" /&gt;&lt;Row Index="9" Size="55" /&gt;&lt;Row Index="10" Size="193" /&gt;&lt;Row Index="11" Size="41" /&gt;&lt;Row Index="12" Size="178" /&gt;&lt;Row Index="13" Size="42" /&gt;&lt;Row Index="14" Size="189" /&gt;&lt;Row Index="15" Size="42" /&gt;&lt;Column Index="4" Size="101" /&gt;&lt;Column Index="5" Size="99" /&gt;&lt;Column Index="6" Size="102" /&gt;&lt;Column Index="8" Size="96" /&gt;&lt;Column Index="9" Size="92" /&gt;&lt;Column Index="10" Size="125" /&gt;&lt;Column Index="11" Size="127" /&gt;&lt;CellEvent Row="13" Col="6" EventOn="OnUpdate" EventCommand="javascript:opinionChanged('#C-13-6');" /&gt;&lt;CellEvent Row="13" Col="6" EventOn="OnDblClick" EventCommand="" /&gt;&lt;CellEvent Row="15" Col="6" EventOn="OnUpdate" EventCommand="javascript:opinionChanged('#C-15-6');" /&gt;&lt;Cell Col="2" Row="2" MergeToCol="11" FontName="方正小标宋简体" FontSize="24" Align="2" Value="发文表单" /&gt;&lt;Cell Col="2" Row="4" MergeToCol="3" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="发文编号" /&gt;&lt;Cell Col="7" Row="4" MergeToCol="8" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="发文日期" /&gt;&lt;Cell Col="2" Row="5" MergeToCol="3" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="发文类型" /&gt;&lt;Cell Col="7" Row="5" MergeToCol="8" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="文号" /&gt;&lt;Cell Col="2" Row="6" MergeToCol="3" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="密级" /&gt;&lt;Cell Col="7" Row="6" MergeToCol="8" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="紧急程度" /&gt;&lt;Cell Col="2" Row="7" MergeToCol="3" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="保管期限" /&gt;&lt;Cell Col="7" Row="7" MergeToCol="8" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="归档类目" /&gt;&lt;Cell Col="2" Row="8" MergeToCol="3" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="文件标题" /&gt;&lt;Cell Col="2" Row="9" MergeToCol="3" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="正文" /&gt;&lt;Cell Col="2" Row="10" MergeToCol="3" MergeToRow="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="拟办" /&gt;&lt;Cell Col="4" Row="11" MergeToCol="5" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="签办人" /&gt;&lt;Cell Col="2" Row="12" MergeToCol="3" MergeToRow="13" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="会签" /&gt;&lt;Cell Col="4" Row="13" MergeToCol="5" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="常用意见模板" /&gt;&lt;Cell Col="2" Row="14" MergeToCol="3" MergeToRow="15" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="主要领导&amp;#xA;审核" /&gt;&lt;Cell Col="4" Row="15" MergeToCol="5" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="常用意见模板" /&gt;&lt;Cell Col="4" Row="4" MergeToCol="6" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="16" /&gt;&lt;Cell Col="9" Row="4" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" BackColor="" FontSize="16" FontName="仿宋_GB2312" DSValues="yyyy-mm-dd,@" DataSource="3" /&gt;&lt;Cell Col="4" Row="5" MergeToCol="6" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" DSValues="类型1&amp;#xA;类型2" FontName="仿宋_GB2312" FontSize="16" DataSource="1" /&gt;&lt;Cell Col="9" Row="5" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="仿宋_GB2312" /&gt;&lt;Cell Col="4" Row="6" MergeToCol="6" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" DSValues="密级1&amp;#xA;密级2" FontName="仿宋_GB2312" FontSize="16" DataSource="1" /&gt;&lt;Cell Col="9" Row="6" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="仿宋_GB2312" DSValues="普通&amp;#xA;紧急&amp;#xA;非常紧急" DataSource="1" /&gt;&lt;Cell Col="4" Row="7" MergeToCol="6" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" DSValues="1年&amp;#xA;5年&amp;#xA;10年&amp;#xA;永久" FontName="仿宋_GB2312" FontSize="16" DataSource="1" /&gt;&lt;Cell Col="9" Row="7" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="仿宋_GB2312" DSValues="类目1&amp;#xA;类目2" DataSource="1" /&gt;&lt;Cell Col="4" Row="8" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="16" /&gt;&lt;Cell Col="4" Row="9" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="16" DataSource="10" /&gt;&lt;Cell Col="4" Row="10" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="16" /&gt;&lt;Cell Col="6" Row="11" MergeToCol="7" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="16" Align="2" DataSource="102" /&gt;&lt;Cell Col="10" Row="11" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="16" Align="2" DataSource="106" /&gt;&lt;Cell Col="4" Row="12" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="16" KeepHistory="true" /&gt;&lt;Cell Col="6" Row="13" MergeToCol="7" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="16" DSValues="公共模板意见|Content|Content|Content" Align="2" DataSource="2" /&gt;&lt;Cell Col="10" Row="13" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="16" Align="2" /&gt;&lt;Cell Col="4" Row="14" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="16" KeepHistory="true" /&gt;&lt;Cell Col="6" Row="15" MergeToCol="7" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="16" DSValues="公共模板意见|Content|Content|Content" Align="2" DataSource="2" /&gt;&lt;Cell Col="10" Row="15" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="16" Align="2" /&gt;&lt;Cell Col="8" Row="11" MergeToCol="9" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="签办日期" /&gt;&lt;Cell Col="8" Row="13" MergeToCol="9" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="个人意见模板" /&gt;&lt;Cell Col="8" Row="15" MergeToCol="9" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="个人意见模板" /&gt;&lt;Cell Col="11" Row="1" BackColor="FFFFFF" /&gt;&lt;Cell Col="1" Row="1" /&gt;&lt;/Table&gt;</Document>
+    <UpdateTime>2019/6/18 14:16:07</UpdateTime>
+    <RowHeight>2,58;4,52;5,49;6,48;7,49;8,51;9,55;10,124;11,45;12,193;13,41;14,178;15,42;16,189;17,42</RowHeight>
+    <ColWidth>1,59;2,69;3,63;4,94;5,99;6,92;8,65;9,92;10,113;11,117</ColWidth>
+    <Document>&lt;Table&gt;&lt;Row Index="2" Size="58" /&gt;&lt;Row Index="4" Size="52" /&gt;&lt;Row Index="5" Size="49" /&gt;&lt;Row Index="6" Size="48" /&gt;&lt;Row Index="7" Size="49" /&gt;&lt;Row Index="8" Size="51" /&gt;&lt;Row Index="9" Size="55" /&gt;&lt;Row Index="10" Size="124" /&gt;&lt;Row Index="11" Size="45" /&gt;&lt;Row Index="12" Size="193" /&gt;&lt;Row Index="13" Size="41" /&gt;&lt;Row Index="14" Size="178" /&gt;&lt;Row Index="15" Size="42" /&gt;&lt;Row Index="16" Size="189" /&gt;&lt;Row Index="17" Size="42" /&gt;&lt;Column Index="1" Size="59" /&gt;&lt;Column Index="2" Size="69" /&gt;&lt;Column Index="3" Size="63" /&gt;&lt;Column Index="4" Size="94" /&gt;&lt;Column Index="5" Size="99" /&gt;&lt;Column Index="6" Size="92" /&gt;&lt;Column Index="8" Size="65" /&gt;&lt;Column Index="9" Size="92" /&gt;&lt;Column Index="10" Size="113" /&gt;&lt;Column Index="11" Size="117" /&gt;&lt;CellEvent Row="15" Col="6" EventOn="OnUpdate" EventCommand="javascript:opinionChanged('#C-15-6');" /&gt;&lt;CellEvent Row="17" Col="6" EventOn="OnUpdate" EventCommand="javascript:opinionChanged('#C-17-6');" /&gt;&lt;CellEvent Row="17" Col="6" EventOn="OnDblClick" EventCommand="" /&gt;&lt;Cell Col="2" Row="2" MergeToCol="11" FontName="方正小标宋简体" FontSize="24" Align="2" Value="发文表单" /&gt;&lt;Cell Col="2" Row="4" MergeToCol="3" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="发文编号" /&gt;&lt;Cell Col="7" Row="4" MergeToCol="8" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="发文日期" /&gt;&lt;Cell Col="2" Row="5" MergeToCol="3" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="发文类型" /&gt;&lt;Cell Col="7" Row="5" MergeToCol="8" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="文号" /&gt;&lt;Cell Col="2" Row="6" MergeToCol="3" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="密级" /&gt;&lt;Cell Col="7" Row="6" MergeToCol="8" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="紧急程度" /&gt;&lt;Cell Col="2" Row="7" MergeToCol="3" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="保管期限" /&gt;&lt;Cell Col="7" Row="7" MergeToCol="8" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="归档类目" /&gt;&lt;Cell Col="2" Row="8" MergeToCol="3" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="文件标题" /&gt;&lt;Cell Col="2" Row="9" MergeToCol="3" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="正文" /&gt;&lt;Cell Col="2" Row="12" MergeToCol="3" MergeToRow="13" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="拟办" /&gt;&lt;Cell Col="4" Row="13" MergeToCol="5" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="签办人" /&gt;&lt;Cell Col="2" Row="14" MergeToCol="3" MergeToRow="15" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="会签" /&gt;&lt;Cell Col="4" Row="15" MergeToCol="5" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="常用意见模板" /&gt;&lt;Cell Col="2" Row="16" MergeToCol="3" MergeToRow="17" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="主要领导&amp;#xA;审核" /&gt;&lt;Cell Col="4" Row="17" MergeToCol="5" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="常用意见模板" /&gt;&lt;Cell Col="4" Row="4" MergeToCol="6" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" /&gt;&lt;Cell Col="9" Row="4" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" BackColor="" FontSize="14" FontName="仿宋_GB2312" DSValues="yyyy-mm-dd,@" DataSource="3" /&gt;&lt;Cell Col="4" Row="5" MergeToCol="6" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" DSValues="局党组发文单&amp;#xA;住房和城乡建设局发文单&amp;#xA;无锡市新吴区重点建设项目管理中心&amp;#xA;行政管理建议书&amp;#xA;行政告诫书&amp;#xA;行政处罚事先告知书&amp;#xA;新区管委会会议纪要&amp;#xA;环境违法行为限期整改通知单&amp;#xA;村庄整治办发文单&amp;#xA;行政约谈通知书&amp;#xA;新吴区交通干线整治办公室&amp;#xA;其他发文单&amp;#xA;建设环保局应急快报&amp;#xA;局党总支发文单" DataSource="1" /&gt;&lt;Cell Col="9" Row="5" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="14" FontName="仿宋_GB2312" /&gt;&lt;Cell Col="4" Row="6" MergeToCol="6" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" DSValues="不涉密&amp;#xA;秘密&amp;#xA;机密&amp;#xA;绝密" DataSource="1" /&gt;&lt;Cell Col="9" Row="6" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="14" FontName="仿宋_GB2312" DSValues="普通&amp;#xA;紧急&amp;#xA;非常紧急" DataSource="1" /&gt;&lt;Cell Col="4" Row="7" MergeToCol="6" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" DSValues="10年&amp;#xA;30年&amp;#xA;永久" DataSource="1" /&gt;&lt;Cell Col="9" Row="7" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="14" FontName="仿宋_GB2312" DSValues="省政府&amp;#xA;市委市政府&amp;#xA;市局文件&amp;#xA;区局文件&amp;#xA;内部发文&amp;#xA;其他" DataSource="1" /&gt;&lt;Cell Col="4" Row="8" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" /&gt;&lt;Cell Col="4" Row="9" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" DataSource="10" /&gt;&lt;Cell Col="4" Row="12" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" /&gt;&lt;Cell Col="6" Row="13" MergeToCol="7" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" Align="2" DataSource="102" /&gt;&lt;Cell Col="10" Row="13" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" Align="2" DataSource="106" /&gt;&lt;Cell Col="4" Row="14" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" KeepHistory="true" /&gt;&lt;Cell Col="6" Row="15" MergeToCol="7" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" DSValues="公共模板意见|Content|Content|Content" Align="2" DataSource="2" /&gt;&lt;Cell Col="10" Row="15" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" Align="2" /&gt;&lt;Cell Col="4" Row="16" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" KeepHistory="true" /&gt;&lt;Cell Col="6" Row="17" MergeToCol="7" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" DSValues="公共模板意见|Content|Content|Content" Align="2" DataSource="2" /&gt;&lt;Cell Col="10" Row="17" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="仿宋_GB2312" FontSize="14" Align="2" /&gt;&lt;Cell Col="8" Row="13" MergeToCol="9" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="签办日期" /&gt;&lt;Cell Col="8" Row="15" MergeToCol="9" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontName="方正小标宋简体" FontSize="16" Align="2" Value="个人意见模板" /&gt;&lt;Cell Col="8" Row="17" MergeToCol="9" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="16" FontName="方正小标宋简体" Align="2" Value="个人意见模板" /&gt;&lt;Cell Col="11" Row="1" BackColor="FFFFFF" /&gt;&lt;Cell Col="2" Row="10" MergeToCol="3" MergeToRow="11" FontName="方正小标宋简体" FontSize="16" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" Align="2" Value="部门审核" /&gt;&lt;Cell Col="4" Row="11" MergeToCol="5" FontSize="16" FontName="方正小标宋简体" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" Align="2" Value="签办人" /&gt;&lt;Cell Col="6" Row="11" MergeToCol="7" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="14" FontName="仿宋_GB2312" Align="2" DataSource="102" /&gt;&lt;Cell Col="8" Row="11" MergeToCol="9" FontSize="16" FontName="方正小标宋简体" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" Align="2" Value="签办日期" /&gt;&lt;Cell Col="10" Row="11" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="14" FontName="仿宋_GB2312" Align="2" DataSource="106" /&gt;&lt;Cell Col="4" Row="10" MergeToCol="11" BorderTopWidth="1" BorderRightWidth="1" BorderBottomWidth="1" BorderLeftWidth="1" FontSize="14" FontName="仿宋_GB2312" DSValues="同意&amp;#xA;不同意" DataSource="1" /&gt;&lt;/Table&gt;</Document>
     <DataStorage>&lt;Data&gt;&lt;DataSource Name="公共模板意见" Connstr="137数据库" Sql="SELECT ID, Content FROM TGR_PublicOpinion;" /&gt;&lt;/Data&gt;</DataStorage>
     <Script>/*******************************************************************
  * 住建局发文表单
@@ -574,7 +649,12 @@ function main() {
                 {'content': '无锡市太湖水污染防治办公室'}
             ]
             // 定制显示来文单位
-            ShowUnitList("unit", "718px", "231px", "345px", "54px", "55px", options, '#C-5-9', '#C-5-9', null);
+            ShowUnitList("unit", "636px", "231px", "323px", "54px", "55px", options, '#C-5-9', '#C-5-9', null);
+        }
+
+        if (nid === 'NODE0002' || nid === 'NODE0005') {
+            // 正文编辑按钮
+            addEditDocButton(worksheet_id);
         }
     }
     $("#tbSheet").show();
@@ -606,6 +686,7 @@ function loadScripts(array,callback){
 // 通用样式修改
 function AddCustomCss() {
     // 修复弹出框被文件选择框挡住的问题
+    // .DropDown ul {font-size:12px;}
     var styleTag = $('&lt;style&gt;.DropDown { z-index: 999; } .my-niban-opinion a, .my-opinion a {display:inline-block; margin-right: 10px;border: 1px solid #337ab7;font-size: 13px;padding: 3px 5px;margin-bottom: 10px;margin-left:15px;} .my-niban-opinion textarea, .my-opinion textarea { margin-top: 3px;margin-left: 15px;} #receiveNo &gt; ul &gt; li:hover,div#unit &gt; ul &gt; li:hover {background: rgb(207,229,239);}&lt;/style&gt;')
 
     $('html &gt; head').append(styleTag);
@@ -616,6 +697,148 @@ function AddCustomCss() {
     $("#page").css('width', '100%');
     $("#page").css('height', '100%');
     $("#page").css('justify-content', 'center');
+}
+
+
+
+// TODO：放到sdk.js中去
+function addEditDocButton(worksheet_id) {
+    // 自定义顶部按钮
+    var title_bar = $('#titlebar &gt; ul', top.document);
+
+    // 创建已阅按钮
+    var edit_li = document.createElement('LI');
+    var edit_button = document.createElement('BUTTON');
+    edit_button.setAttribute("id", "btn-custom-read");
+    edit_button.onclick = function () {
+        GetCellAttachment(worksheet_id, 9, 4, WindowsOpenDoc);
+    };
+    var i = document.createElement('I');
+    i.className = 'fa fa-edit';
+    i.textContent = ' 正文编辑';
+    edit_button.appendChild(i);
+    edit_li.appendChild(edit_button);
+
+    title_bar.prepend(edit_li);
+}
+
+/*
+ * 获取公文指定位置的附件列表
+ */
+function GetCellAttachment(sid, row, col, callback) {
+    $.ajax({
+        url: '/Apps/DEP/Common/CellAttachment?sid=' + sid + '&amp;row=' + row + '&amp;col=' + col,
+        type: 'GET',
+        success: function(data) {
+            console.log(data)
+            if (data.Succeed) {
+                attachment_list = data.Data.attachments;
+                if (attachment_list.length == 1) {
+                    var session = getCookie('APPKIZTICKET');
+                    var origin = location.origin;
+                    var attachment = attachment_list[0];
+                    callback &amp;&amp; callback(origin, session, attachment, row, col);
+                } else {
+                    alert('附件个数不为1，无法正文编辑');
+                }
+            }
+            else
+            {
+                console.log(data.Message)
+            }
+        },
+        error: function(error) {
+            console.log(error)
+        }
+    })
+}
+
+function WindowsOpenDoc(origin, session, attachment, row, col) {
+    var att_id = attachment.AttID;
+
+    $.ajax({
+        url: 'http://127.0.0.1:5000/openDoc',
+        type: 'POST',
+        data: {
+            'origin': origin,
+            'session': session,
+            'att_id': attachment.AttID,
+            'extension': attachment.AttExtension,
+            'row': row,
+            'col': col
+        },
+        success: function(data) {
+            console.log(data)
+            if (data.code == 200) {
+                // 开始轮询，是否已经编辑上传
+                CheckAttachmentStatus(att_id);
+            } else {
+                console.log(data)
+                alert(data.message)
+            }
+        },
+        error:function(error){
+            console.log(error);
+            alert('请确认"公文编辑助手"已打开')
+        }
+    })
+}
+
+function CheckAttachmentStatus(att_id) {
+    var interval = window.setInterval(function(){
+        $.ajax({
+            url: 'http://127.0.0.1:5000/status/' + att_id,
+            type: 'GET',
+            success: function(data) {
+                if (data.code == 200) {
+                    // 附件已经上传，询问是否刷新页面
+                    if (window.confirm('检测到附件更新，是否刷新页面？')) {
+                        // 停止轮询，并刷新页面
+                        clearInterval(interval);
+                        // YES
+                        top.window.location.reload();
+                    } else {
+                        // NO
+                        // just stay
+                        console.log('用户取消了刷新页面')
+                    }
+                } else if (data.code == 203) {
+                    // 用户未更新文档，保持不动
+                    console.log(data)
+                    clearInterval(interval);
+                } else if (data.code == 400){
+                    // 附件已经上传，询问是否刷新页面
+                    if (window.confirm('提示：' + data.message)) {
+                        // 停止轮询，并刷新页面
+                        clearInterval(interval);
+                        // YES
+                        top.window.location.reload();
+                    } else {
+                        // NO
+                        // 停止轮询，并刷新页面
+                        clearInterval(interval);
+                        // YES
+                        top.window.location.reload();
+                        console.log('用户取消了刷新页面')
+                    }
+                } else {
+                    // 附件未上传，一直询问
+                    console.log(data)
+                }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        })
+    }, 1000, att_id);
+    
+}
+/*
+ * 工具类
+ */
+function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    if (match) return match[2];
 }</Script>
   </Worksheets>
 </Template>
